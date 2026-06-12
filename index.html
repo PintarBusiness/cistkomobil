@@ -6,11 +6,10 @@
 <meta name="theme-color" content="#0A0F18">
 <title>Čistkomobil — Mobilno čiščenje vozil | Ptuj in okolica</title>
 <meta name="description" content="Profesionalno mobilno čiščenje notranjosti in zunanjosti vozil na Ptuju in v okolici. Pridemo k vam — osebna, gospodarska in kmetijska vozila. Pokličite: 051 887 853.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230A0F18'/%3E%3Cpath d='M50 16C50 16 26 46 26 64a24 24 0 0 0 48 0c0-18-24-48-24-48z' fill='%232F8CF0'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -43,7 +42,7 @@
   --ink-700:#2A3C5A;
   --blue-500:#2F8CF0;
   --blue-400:#62ABF8;
-  --blue-glow:rgba(47,140,240,.35);
+  --blue-glow:rgba(47,140,240,.28);
   --mint-400:#4FE8C9;
   --paper-50:#F5F8FC;
   --paper-100:#EBF0F6;
@@ -81,12 +80,22 @@ img{max-width:100%;display:block;}
 a{color:inherit;text-decoration:none;}
 ul{list-style:none;}
 button{font-family:inherit;}
-.container{max-width:1240px;margin:0 auto;padding:0 24px;}
+.container{max-width:1240px;margin:0 auto;padding:0 5%;}
 @media(min-width:768px){.container{padding:0 40px;}}
 
 h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;letter-spacing:-.02em;color:var(--ink-950);}
 
 .section{padding:clamp(64px,10vw,128px) 0;}
+
+:focus-visible{outline:2px solid var(--blue-400);outline-offset:3px;border-radius:4px;}
+
+.icon{
+  width:1em;height:1em;display:inline-block;flex-shrink:0;
+  vertical-align:-0.125em;
+  fill:none;stroke:currentColor;stroke-width:1.8;
+  stroke-linecap:round;stroke-linejoin:round;
+}
+.icon-fill{fill:currentColor;stroke:none;}
 .eyebrow{
   font-family:var(--font-mono);
   font-size:.78rem;
@@ -128,14 +137,14 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
   transition:transform .25s var(--ease), box-shadow .25s var(--ease), background .25s, border-color .25s;
   white-space:nowrap;
 }
-.btn-primary{background:var(--blue-500);color:#fff;box-shadow:0 14px 32px -10px var(--blue-glow);}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px -10px var(--blue-glow);}
+.btn-primary{background:var(--blue-500);color:#fff;box-shadow:0 10px 26px -12px var(--blue-glow);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 32px -12px var(--blue-glow);}
 .btn-ghost{border-color:rgba(255,255,255,.22);color:#fff;background:transparent;}
 .btn-ghost:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.06);}
 .btn-outline{border-color:var(--paper-200);color:var(--ink-950);background:transparent;}
 .btn-outline:hover{border-color:var(--blue-500);color:var(--blue-500);}
 .btn-block{width:100%;justify-content:center;}
-.btn i{font-size:.9em;}
+.btn .icon{font-size:.9em;}
 
 /* ============ NAV ============ */
 .nav{
@@ -156,28 +165,37 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 .logo{display:flex;align-items:center;gap:12px;font-family:var(--font-display);font-weight:700;font-size:1.28rem;color:#fff;letter-spacing:-.01em;}
 .logo-mark{
   width:38px;height:38px;border-radius:11px;
-  background:linear-gradient(135deg,var(--blue-500),var(--mint-400));
-  display:flex;align-items:center;justify-content:center;
-  color:var(--ink-950);font-size:1.05rem;flex-shrink:0;
+  overflow:hidden;flex-shrink:0;
+  object-fit:cover;
+  display:block;
+  border:1px solid rgba(255,255,255,.12);
 }
 .logo .accent{color:var(--blue-400);}
-.nav-links{display:flex;gap:34px;align-items:center;}
-.nav-links a{font-size:.95rem;font-weight:500;color:rgba(255,255,255,.78);transition:color .2s;position:relative;}
+.nav-links{display:flex;gap:28px;align-items:center;flex-wrap:nowrap;}
+.nav-links a{font-size:.93rem;font-weight:500;color:rgba(255,255,255,.78);transition:color .2s;position:relative;white-space:nowrap;}
 .nav-links a:hover{color:#fff;}
-.nav-right{display:flex;align-items:center;gap:18px;}
-.nav-phone{display:flex;align-items:center;gap:8px;color:#fff;font-family:var(--font-mono);font-size:.92rem;font-weight:500;}
-.nav-phone i{color:var(--blue-400);}
+.nav-right{display:flex;align-items:center;gap:18px;flex-shrink:0;}
+.nav-cta-mobile{display:none;}
 
 .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:30px;height:30px;cursor:pointer;background:none;border:0;padding:0;z-index:1100;}
+.hamburger:focus-visible{outline:2px solid var(--blue-400);outline-offset:-4px;border-radius:8px;}
 .hamburger span{display:block;width:100%;height:2px;background:#fff;border-radius:2px;transition:all .3s var(--ease);}
 .hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 .hamburger.active span:nth-child(2){opacity:0;}
 .hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
-@media(max-width:920px){
+@media(max-width:1140px){
+  .nav-backdrop{
+    position:fixed;inset:0;background:rgba(6,9,15,.6);
+    backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);
+    opacity:0;pointer-events:none;transition:opacity .4s var(--ease);
+    z-index:1050;
+  }
+  .nav-backdrop.active{opacity:1;pointer-events:auto;}
   .nav-links{
     position:fixed;top:0;right:-100%;height:100vh;width:min(320px,82vw);
     background:var(--ink-950);
+    z-index:1060;
     flex-direction:column;justify-content:center;align-items:flex-start;
     padding:40px;gap:30px;
     transition:right .45s var(--ease);
@@ -185,19 +203,19 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
   }
   .nav-links.active{right:0;}
   .nav-links a{font-size:1.15rem;}
-  .nav-phone{display:none;}
+  .nav-right{display:none;}
   .hamburger{display:flex;}
-  .nav-cta-mobile{margin-top:10px;}
+  .nav-cta-mobile{display:block;margin-top:10px;width:100%;}
 }
 
 /* ============ HERO ============ */
 .hero{
   position:relative;
-  min-height:100vh;
+  min-height:108vh;
   display:flex;align-items:center;
   background:linear-gradient(165deg,var(--ink-950) 0%,var(--ink-900) 55%,var(--ink-800) 100%);
   overflow:hidden;
-  padding-top:130px;padding-bottom:90px;
+  padding-top:120px;padding-bottom:56px;
   color:#fff;
 }
 .hero-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none;}
@@ -209,29 +227,23 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
   background-size:64px 64px;
   mask-image:radial-gradient(circle at 30% 30%, rgba(0,0,0,.9), transparent 70%);
 }
-.particle{
-  position:absolute;bottom:-120px;border-radius:50%;
-  background:radial-gradient(circle at 32% 32%, rgba(98,171,248,.55), rgba(79,232,201,.05) 72%);
-  filter:blur(1px);
-  animation:float-up linear infinite;
-}
-@keyframes float-up{
-  0%{transform:translateY(0) translateX(0) scale(1);opacity:0;}
-  10%{opacity:.55;}
-  90%{opacity:.45;}
-  100%{transform:translateY(-115vh) translateX(var(--drift,30px)) scale(1.2);opacity:0;}
+.hero-bg .glow{
+  position:absolute;top:-20%;right:-10%;width:60%;height:80%;
+  background:radial-gradient(circle, rgba(47,140,240,.18), transparent 70%);
+  filter:blur(40px);
 }
 
 .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:64px;align-items:center;position:relative;z-index:2;}
-@media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:56px;}}
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:56px;}
+  .hero{min-height:auto;}
+  .trust-section{margin-top:0;padding-top:8px;}
+}
 
 .hero-text h1{font-size:clamp(2.6rem,6.2vw,4.7rem);margin:20px 0 24px;color:#fff;}
 .hero-text h1 .grad{background:linear-gradient(100deg,var(--blue-400),var(--mint-400));-webkit-background-clip:text;background-clip:text;color:transparent;}
 .hero-text p.lead{font-size:1.15rem;color:var(--slate-300);max-width:520px;margin-bottom:36px;}
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:32px;}
-.hero-meta{display:flex;gap:28px;flex-wrap:wrap;font-family:var(--font-mono);font-size:.82rem;color:var(--slate-400);}
-.hero-meta span{display:flex;align-items:center;gap:8px;}
-.hero-meta i{color:var(--mint-400);font-size:.85em;}
 
 .hero-visual-wrap{position:relative;}
 .hero-visual{
@@ -293,10 +305,12 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 }
 @media(max-width:520px){
   .hero{padding-top:110px;}
+  .hero-ctas{flex-direction:column;align-items:stretch;}
+  .hero-ctas .btn{width:100%;}
 }
 
 /* ============ TRUST BAR ============ */
-.trust-section{position:relative;z-index:5;margin-top:-64px;padding:0 0 0;}
+.trust-section{position:relative;z-index:5;margin-top:-28px;padding:0 0 0;}
 .trust-grid{
   display:grid;grid-template-columns:repeat(4,1fr);
   background:#fff;border-radius:var(--radius-lg);
@@ -304,7 +318,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 }
 .trust-item{padding:30px 26px;border-right:1px solid var(--paper-200);}
 .trust-item:last-child{border-right:none;}
-.trust-item i{font-size:1.5rem;color:var(--blue-500);margin-bottom:14px;display:block;}
+.trust-item .icon{font-size:1.5rem;color:var(--blue-500);margin-bottom:14px;display:block;}
 .trust-item h4{font-size:.98rem;margin-bottom:6px;}
 .trust-item p{font-size:.86rem;color:var(--slate-500);}
 @media(max-width:920px){
@@ -335,6 +349,12 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
   background:linear-gradient(135deg,var(--blue-500),var(--mint-400));
   display:flex;align-items:center;justify-content:center;
   color:#fff;font-size:1.35rem;margin-bottom:22px;
+  box-shadow:0 10px 24px -10px var(--blue-glow);
+  transition:transform .35s var(--ease), box-shadow .35s var(--ease);
+}
+.service-card:hover .service-icon{
+  transform:translateY(-4px) scale(1.05);
+  box-shadow:0 14px 28px -10px var(--blue-glow);
 }
 .service-card h3{font-size:1.15rem;margin-bottom:10px;}
 .service-card p{color:var(--slate-500);font-size:.95rem;}
@@ -364,7 +384,12 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 
 /* ============ GALLERY ============ */
 .gallery{background:var(--paper-50);}
-.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:16px;margin-top:56px;}
+.gallery-hint{
+  display:none;align-items:center;gap:8px;
+  margin-top:14px;font-family:var(--font-mono);font-size:.78rem;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--slate-400);
+}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;grid-auto-flow:dense;gap:16px;margin-top:56px;}
 .gallery-item{position:relative;border-radius:var(--radius-md);overflow:hidden;cursor:pointer;grid-row:span 1;}
 .gallery-item.tall{grid-row:span 2;}
 .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease);}
@@ -378,19 +403,45 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 }
 .gallery-item:hover .gallery-caption{opacity:1;transform:translateY(0);}
 .gallery-item::before{
-  content:'\f00e';font-family:'Font Awesome 6 Free';font-weight:900;
+  content:'';
   position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;
-  background:rgba(10,15,24,.55);color:#fff;font-size:.78rem;
-  display:flex;align-items:center;justify-content:center;
+  background:rgba(10,15,24,.55);color:#fff;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 3h6v6'/%3E%3Cpath d='M9 21H3v-6'/%3E%3Cpath d='M21 3l-7 7'/%3E%3Cpath d='M3 21l7-7'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:center;background-size:16px;
   opacity:0;transition:opacity .3s;backdrop-filter:blur(6px);
 }
 .gallery-item:hover::before{opacity:1;}
 @media(max-width:920px){
   .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px;}
-  .gallery-item.tall{grid-row:span 2;}
 }
-@media(max-width:560px){
-  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px;gap:10px;}
+@media(max-width:680px){
+  .gallery-hint{display:flex;}
+  .gallery-grid{
+    display:flex;
+    grid-template-columns:unset;
+    grid-auto-rows:unset;
+    grid-auto-flow:unset;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    gap:14px;
+    margin:28px -5% 0;
+    padding:4px 5% 8px;
+    scroll-padding-left:5%;
+  }
+  .gallery-grid::-webkit-scrollbar{display:none;}
+  .gallery-item, .gallery-item.tall{
+    grid-row:auto;
+    flex:0 0 80%;
+    aspect-ratio:4/5;
+    scroll-snap-align:start;
+  }
+  .gallery-caption{
+    opacity:1;transform:none;
+    background:linear-gradient(to top,rgba(10,15,24,.8),transparent 65%);
+  }
+  .gallery-item::before{display:none;}
 }
 
 /* lightbox */
@@ -419,9 +470,13 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
   background:#fff;border:1px solid var(--paper-200);border-radius:var(--radius-md);
   padding:18px 22px;margin-top:40px;font-size:.92rem;color:var(--slate-500);max-width:760px;
 }
-.pricing-note i{color:var(--blue-500);margin-top:3px;}
+.pricing-note .icon{color:var(--blue-500);margin-top:3px;}
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px;align-items:stretch;}
 @media(max-width:980px){.pricing-grid{grid-template-columns:1fr;max-width:480px;margin-inline:auto;}}
+@media(max-width:680px){
+  .fleet-card{flex-direction:column;align-items:flex-start;padding:28px 24px;gap:18px;}
+  .fleet-icons{font-size:1.3rem;}
+}
 .price-card{
   background:#fff;border:1px solid var(--paper-200);border-radius:var(--radius-xl);
   padding:38px 32px;display:flex;flex-direction:column;position:relative;
@@ -444,7 +499,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 .price-card .price span{font-size:.98rem;font-weight:500;color:var(--slate-500);}
 .price-features{flex:1;margin-bottom:30px;}
 .price-features li{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;color:var(--slate-700);margin-bottom:13px;}
-.price-features li i{color:var(--blue-500);margin-top:3px;font-size:.85em;}
+.price-features li .icon{color:var(--blue-500);margin-top:3px;font-size:.85em;}
 
 .fleet-card{
   margin-top:24px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
@@ -464,7 +519,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 .about-badge{
   position:absolute;bottom:-28px;right:-28px;
   background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);
-  padding:14px;display:flex;align-items:center;gap:14px;max-width:260px;
+  padding:18px;display:flex;align-items:center;gap:14px;max-width:260px;
   border:1px solid var(--paper-200);
 }
 .about-badge img{width:58px;height:58px;border-radius:50%;object-fit:cover;flex-shrink:0;}
@@ -476,10 +531,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 .about-features{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
 @media(max-width:520px){.about-features{grid-template-columns:1fr;}}
 .about-feature{display:flex;gap:12px;align-items:flex-start;}
-.about-feature i{
+.about-feature .icon{
   width:32px;height:32px;border-radius:9px;background:var(--paper-100);
   display:flex;align-items:center;justify-content:center;color:var(--blue-500);
-  flex-shrink:0;font-size:.92rem;
+  flex-shrink:0;padding:8px;stroke-width:1.6;
 }
 .about-feature span{font-size:.92rem;color:var(--slate-700);font-weight:500;}
 
@@ -491,13 +546,13 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:56px;align-items:start;}
 @media(max-width:980px){.contact-grid{grid-template-columns:1fr;gap:40px;}}
 .contact-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
-@media(max-width:480px){.contact-cards{grid-template-columns:1fr;}}
+@media(max-width:680px){.contact-cards{grid-template-columns:1fr;}}
 .contact-card{
   background:var(--ink-900);border:1px solid var(--ink-800);border-radius:var(--radius-md);
   padding:24px;transition:border-color .3s, transform .3s var(--ease);
 }
 .contact-card:hover{border-color:var(--blue-500);transform:translateY(-3px);}
-.contact-card i{color:var(--blue-400);font-size:1.35rem;margin-bottom:14px;display:block;}
+.contact-card .icon{color:var(--blue-400);font-size:1.35rem;margin-bottom:14px;display:block;}
 .contact-card h4{color:#fff;font-size:.95rem;margin-bottom:6px;}
 .contact-card p, .contact-card a{color:var(--slate-400);font-size:.9rem;}
 .contact-card a:hover{color:var(--blue-400);}
@@ -527,59 +582,151 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 }
 .footer-bottom a{color:var(--slate-400);transition:color .2s;}
 .footer-bottom a:hover{color:var(--blue-400);}
+
+/* ============ MOBILE POLISH ============ */
+@media(max-width:640px){
+  .container{padding:0 20px;}
+  .section{padding:56px 0;}
+  .section-head h2{font-size:clamp(1.6rem,7.5vw,2.2rem);}
+  .section-head p{font-size:.98rem;}
+
+  /* Hero */
+  .hero{padding-top:96px;padding-bottom:36px;}
+  .hero-grid{gap:40px;}
+  .hero-text h1{font-size:clamp(2.1rem,10vw,2.7rem);margin:14px 0 16px;}
+  .hero-text p.lead{font-size:1rem;margin-bottom:26px;}
+  .hero-visual{aspect-ratio:4/3.2;}
+  .service-ticket{padding:16px 18px;width:100%;margin-top:16px;}
+  .ticket-list li{font-size:.74rem;}
+  .ticket-label{font-size:.62rem;}
+
+  /* Trust bar */
+  .trust-item{padding:22px 20px;}
+  .trust-item h4{font-size:.95rem;}
+  .trust-item p{font-size:.84rem;}
+
+  /* Services */
+  .services-grid{gap:16px;margin-top:40px;}
+  .service-card{padding:26px 22px;}
+  .service-icon{width:48px;height:48px;margin-bottom:18px;}
+
+  /* Process */
+  .process-list{gap:32px;}
+
+  /* Gallery */
+  .gallery-grid{margin-top:32px;}
+
+  /* Pricing */
+  .pricing-grid{gap:18px;margin-top:24px;}
+  .price-card{padding:28px 24px;}
+  .price-card .price{font-size:1.9rem;margin:14px 0 20px;}
+  .pricing-note{padding:14px 16px;font-size:.85rem;margin-top:28px;}
+  .fleet-card{padding:26px 22px;gap:20px;}
+  .fleet-card-text h3{font-size:1.1rem;}
+
+  /* About */
+  .about-badge{padding:14px;gap:12px;}
+  .about-badge img{width:46px;height:46px;}
+  .about-badge p{font-size:.8rem;}
+  .about-features{gap:14px;}
+
+  /* Contact */
+  .contact-cards{gap:14px;}
+  .contact-card{padding:20px;}
+  .contact-grid{margin-top:36px;}
+  .map-wrap{min-height:260px;}
+  .map-wrap iframe{min-height:260px;}
+
+  /* Footer */
+  .footer{padding:44px 0 24px;}
+  .footer-grid{gap:32px;}
+  .footer-brand p{max-width:none;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:8px;margin-top:36px;}
+}
+
+@media(max-width:380px){
+  .hero-text h1{font-size:2rem;}
+  .btn{padding:14px 22px;font-size:.9rem;}
+  .price-card{padding:24px 18px;}
+  .fleet-card{padding:22px 18px;}
+}
 </style>
 </head>
 <body>
+<svg style="display:none" aria-hidden="true">
+<symbol id="i-check" viewBox="0 0 24 24"><polyline points="4 12 9 18 20 6"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.18 4.18 2 2 0 0 1 4.18 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
+<symbol id="i-calendar-check" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></symbol>
+<symbol id="i-tractor" viewBox="0 0 24 24"><circle cx="7" cy="17" r="4"/><circle cx="18" cy="18" r="3"/><path d="M7 17V8h6l3 5h3v3"/><path d="M10 8V5h2"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 6.5-9 12-9 12s-9-5.5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+<symbol id="i-facebook" viewBox="0 0 24 24"><path d="M15 8.5h2V5h-2c-2.2 0-4 1.8-4 4v2H9v3h2v6h3v-6h2.5l.5-3H14V9c0-.3.2-.5.5-.5z"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+<symbol id="i-wind" viewBox="0 0 24 24"><path d="M9.6 4.6a2 2 0 1 1 1.4 3.4H2"/><path d="M12.6 19.4a2 2 0 1 0 1.4-3.4H2"/><path d="M17.7 7.7A2.5 2.5 0 1 1 19.5 12H2"/></symbol>
+<symbol id="i-van" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="10" rx="2"/><path d="M3 11h18"/><circle cx="7.5" cy="18.5" r="1.8"/><circle cx="16.5" cy="18.5" r="1.8"/></symbol>
+<symbol id="i-truck" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h3l3 3v5h-3"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="17.5" cy="18.5" r="2.5"/></symbol>
+<symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.2" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-spray" viewBox="0 0 24 24"><rect x="7" y="7" width="8" height="14" rx="1"/><path d="M9 7V4h4v3"/><line x1="11" y1="1" x2="11" y2="2.5"/><circle cx="18" cy="6" r="1" fill="currentColor" stroke="none"/><circle cx="20.5" cy="10" r="0.8" fill="currentColor" stroke="none"/><circle cx="17" cy="11.5" r="0.7" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-soap" viewBox="0 0 24 24"><rect x="3" y="9" width="14" height="9" rx="2"/><path d="M3 9a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4"/><circle cx="19.5" cy="6" r="1" fill="currentColor" stroke="none"/><circle cx="21.5" cy="9.5" r="0.8" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.4-3.4a6 6 0 0 1-7.6 7.6L6.7 20.3a2.1 2.1 0 0 1-3-3L10.4 10.7a6 6 0 0 1 7.6-7.6z"/></symbol>
+<symbol id="i-list-check" viewBox="0 0 24 24"><polyline points="3 7 4.5 8.5 7 6"/><line x1="10" y1="7" x2="21" y2="7"/><polyline points="3 13 4.5 14.5 7 12"/><line x1="10" y1="13" x2="21" y2="13"/><polyline points="3 19 4.5 20.5 7 18"/><line x1="10" y1="19" x2="21" y2="19"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 4 13c0-4 3-7 9-13 1 5 4 8 4 12a7 7 0 0 1-6 7z"/><path d="M5.5 20.5C8 18 11 15 14.5 11"/></symbol>
+<symbol id="i-images" viewBox="0 0 24 24"><rect x="2" y="6" width="16" height="14" rx="2"/><path d="M7 2h13a2 2 0 0 1 2 2v13"/><circle cx="7.5" cy="11.5" r="1.5" fill="currentColor" stroke="none"/><path d="m4 17 3-3 2.5 2.5L13 12l5 5"/></symbol>
+<symbol id="i-sparkle-hand" viewBox="0 0 24 24"><path d="M8 13V6.5a1.5 1.5 0 1 1 3 0V12"/><path d="M11 12V4.5a1.5 1.5 0 1 1 3 0V12"/><path d="M14 12.5V6a1.5 1.5 0 1 1 3 0v9a4 4 0 0 1-4 4h-3a5 5 0 0 1-4-2l-2.5-3.5a1.4 1.4 0 0 1 2-2L8 13"/><path d="M19 4l.7 1.7L21.5 6.5l-1.8.8L19 9l-.7-1.7-1.8-.8 1.8-.8z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-couch" viewBox="0 0 24 24"><path d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3"/><path d="M3 11h18v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M5 17v2M19 17v2"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="11" x2="12" y2="16"/><circle cx="12" cy="7.5" r="0.9" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-car" viewBox="0 0 24 24"><path d="M3 12.5 4.5 8A2 2 0 0 1 6.4 6.5h11.2A2 2 0 0 1 19.5 8L21 12.5"/><rect x="2" y="12.5" width="20" height="5" rx="1.5"/><circle cx="7" cy="18.5" r="1.7"/><circle cx="17" cy="18.5" r="1.7"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><line x1="7" y1="14" x2="7" y2="14"/><line x1="12" y1="14" x2="12" y2="14"/><line x1="17" y1="14" x2="17" y2="14"/><line x1="7" y1="18" x2="7" y2="18"/><line x1="12" y1="18" x2="12" y2="18"/></symbol>
+<symbol id="i-broom" viewBox="0 0 24 24"><line x1="19" y1="3" x2="10" y2="12"/><path d="M10 12 4.5 17.5a2.5 2.5 0 0 0 3.5 3.5L13.5 15.5"/><path d="M6.5 19 5 20.5M9 17l-1 3M11.5 14.5l1 3"/></symbol>
+<symbol id="i-swap" viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><line x1="21" y1="5" x2="3" y2="5"/><polyline points="7 23 3 19 7 15"/><line x1="3" y1="19" x2="21" y2="19"/></symbol>
+</svg>
 
 <!-- ============ NAV ============ -->
 <nav class="nav" id="nav">
   <div class="container nav-inner">
     <a href="#" class="logo">
-      <span class="logo-mark"><i class="fa-solid fa-droplet"></i></span>
+      <img class="logo-mark" src="images/logo.png" alt="Čistkomobil logo">
       Čistko<span class="accent">mobil</span>
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#storitve">Storitve</a></li>
-      <li><a href="#kako-poteka">Kako poteka</a></li>
       <li><a href="#galerija">Galerija</a></li>
       <li><a href="#cenik">Cenik</a></li>
       <li><a href="#o-nas">O nas</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
-      <li class="nav-cta-mobile"><a href="#kontakt" class="btn btn-primary btn-block"><i class="fa-solid fa-calendar-check"></i> Rezerviraj termin</a></li>
+      <li class="nav-cta-mobile"><a href="#kontakt" class="btn btn-primary btn-block"><svg class="icon"><use href="#i-calendar-check"></use></svg> Rezerviraj termin</a></li>
     </ul>
     <div class="nav-right">
-      <a href="tel:+38651887853" class="nav-phone"><i class="fa-solid fa-phone"></i> 051 887 853</a>
-      <a href="#kontakt" class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> Rezerviraj termin</a>
+      <a href="#kontakt" class="btn btn-primary"><svg class="icon"><use href="#i-calendar-check"></use></svg> Rezerviraj termin</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Meni">
       <span></span><span></span><span></span>
     </button>
   </div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
 </nav>
 
 <!-- ============ HERO ============ -->
 <header class="hero">
   <div class="hero-bg">
     <div class="grid-pattern"></div>
-    <div id="particles"></div>
+    <div class="glow"></div>
   </div>
   <div class="container hero-grid">
     <div class="hero-text" data-reveal>
-      <span class="eyebrow"><i class="fa-solid fa-route"></i> Mobilno čiščenje vozil — Ptuj in okolica</span>
+      <span class="eyebrow"><svg class="icon"><use href="#i-send"></use></svg> Mobilno čiščenje vozil — Ptuj in okolica</span>
       <h1>Čisto. <span class="grad">Sveže.</span> Kot novo.</h1>
-      <p class="lead">Profesionalno čiščenje notranjosti in zunanjosti vozil — pridemo k vam, na vaš naslov, takrat ko vam ustreza. Brez izgubljenega časa, brez čakanja v vrsti.</p>
+      <p class="lead">Pridemo k vam, na vaš naslov — brez čakanja in izgubljenega časa.</p>
       <div class="hero-ctas">
-        <a href="tel:+38651887853" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Pokliči: 051 887 853</a>
-        <a href="#kontakt" class="btn btn-ghost"><i class="fa-solid fa-envelope"></i> Povpraševanje</a>
-      </div>
-      <div class="hero-meta">
-        <span><i class="fa-solid fa-circle-check"></i> Osebna, gospodarska in kmetijska vozila</span>
-        <span><i class="fa-solid fa-circle-check"></i> Prilagodljivi termini</span>
+        <a href="tel:+38651887853" class="btn btn-primary"><svg class="icon"><use href="#i-phone"></use></svg> Pokliči: 051 887 853</a>
+        <a href="#kontakt" class="btn btn-ghost"><svg class="icon"><use href="#i-mail"></use></svg> Povpraševanje</a>
       </div>
     </div>
     <div class="hero-visual-wrap" data-reveal>
       <div class="hero-visual">
-        <img src="data:image/jpeg;base64,HERO_B64" alt="Čiščenje notranjosti vozila — Čistkomobil">
+        <img src="images/hero.jpg" alt="Čiščenje notranjosti vozila — Čistkomobil">
       </div>
       <div class="service-ticket">
         <div class="ticket-head">
@@ -590,9 +737,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
           <li><span class="check"></span>Pregled vozila</li>
           <li><span class="check"></span>Sesanje notranjosti</li>
           <li><span class="check"></span>Čiščenje sedežev</li>
-          <li><span class="check"></span>Plastika in steklo</li>
           <li><span class="check"></span>Razkuževanje</li>
-          <li><span class="check"></span>Zaključni pregled</li>
         </ul>
         <div class="ticket-progress"><div class="ticket-progress-bar" id="ticketProgress"></div></div>
       </div>
@@ -604,24 +749,24 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 <div class="trust-section container">
   <div class="trust-grid" data-reveal>
     <div class="trust-item">
-      <i class="fa-solid fa-route"></i>
+      <svg class="icon"><use href="#i-send"></use></svg>
       <h4>Pridemo k vam</h4>
-      <p>Čiščenje opravimo neposredno na vaši lokaciji — doma, v službi ali na dvorišču.</p>
+      <p>Doma, v službi ali na dvorišču.</p>
     </div>
     <div class="trust-item">
-      <i class="fa-solid fa-car-side"></i>
+      <svg class="icon"><use href="#i-car"></use></svg>
       <h4>Vsa vozila</h4>
-      <p>Od osebnih avtomobilov do dostavnih vozil, tovornjakov in kmetijske mehanizacije.</p>
+      <p>Osebna, gospodarska in kmetijska.</p>
     </div>
     <div class="trust-item">
-      <i class="fa-solid fa-spray-can-sparkles"></i>
+      <svg class="icon"><use href="#i-spray"></use></svg>
       <h4>Profesionalna oprema</h4>
-      <p>Industrijski sesalniki, parni čistilci in preverjena, učinkovita čistilna sredstva.</p>
+      <p>Sesalniki, parni čistilci, preverjena sredstva.</p>
     </div>
     <div class="trust-item">
-      <i class="fa-solid fa-clock"></i>
+      <svg class="icon"><use href="#i-clock"></use></svg>
       <h4>Prilagodljivi termini</h4>
-      <p>Tudi zgodaj zjutraj, zvečer ali ob koncu tedna — po predhodnem dogovoru.</p>
+      <p>Zjutraj, zvečer, vikendi — po dogovoru.</p>
     </div>
   </div>
 </div>
@@ -630,40 +775,40 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 <section class="services section" id="storitve">
   <div class="container">
     <div class="section-head" data-reveal>
-      <span class="eyebrow"><i class="fa-solid fa-list-check"></i> Storitve</span>
+      <span class="eyebrow"><svg class="icon"><use href="#i-list-check"></use></svg> Storitve</span>
       <h2>Vse, kar vaše vozilo potrebuje</h2>
-      <p>Od hitrega osvežitvenega čiščenja do popolne obnove notranjosti — vsako vozilo obravnavamo po meri, neposredno na vaši lokaciji.</p>
+      <p>Od hitre osvežitve do popolne obnove — vse na vaši lokaciji.</p>
     </div>
     <div class="services-grid">
       <div class="service-card" data-reveal>
-        <div class="service-icon"><i class="fa-solid fa-broom"></i></div>
+        <div class="service-icon"><svg class="icon"><use href="#i-broom"></use></svg></div>
         <h3>Notranje čiščenje</h3>
-        <p>Temeljito sesanje sedežev, talnih oblog in prtljažnika ter čiščenje plastičnih in stekljenih površin.</p>
+        <p>Sesanje sedežev, talnih oblog in prtljažnika ter čiščenje plastike in stekel.</p>
       </div>
       <div class="service-card" data-reveal>
-        <div class="service-icon"><i class="fa-solid fa-couch"></i></div>
+        <div class="service-icon"><svg class="icon"><use href="#i-couch"></use></svg></div>
         <h3>Globinsko čiščenje tekstila</h3>
-        <p>Parno čiščenje sedežev, preprog in stropne oblazinjenosti za odstranjevanje madežev in vonjav.</p>
+        <p>Parno čiščenje sedežev in preprog za odstranitev madežev in vonjav.</p>
       </div>
       <div class="service-card" data-reveal>
-        <div class="service-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+        <div class="service-icon"><svg class="icon"><use href="#i-sparkle-hand"></use></svg></div>
         <h3>Nega usnja in plastike</h3>
-        <p>Čiščenje in zaščita usnjenih sedežev ter armaturne plošče z negovalnimi sredstvi za dolgotrajen videz.</p>
+        <p>Čiščenje in zaščita usnja ter armaturne plošče.</p>
       </div>
       <div class="service-card" data-reveal>
-        <div class="service-icon"><i class="fa-solid fa-soap"></i></div>
+        <div class="service-icon"><svg class="icon"><use href="#i-soap"></use></svg></div>
         <h3>Zunanje pranje</h3>
-        <p>Ročno pranje karoserije, platišč in stekel ter osnovna zaščita laka po pranju.</p>
+        <p>Ročno pranje karoserije, platišč in stekel.</p>
       </div>
       <div class="service-card" data-reveal>
-        <div class="service-icon"><i class="fa-solid fa-wind"></i></div>
+        <div class="service-icon"><svg class="icon"><use href="#i-wind"></use></svg></div>
         <h3>Razkuževanje in dezodorizacija</h3>
-        <p>Ozonsko razkuževanje in trajno odstranjevanje neprijetnih vonjav — cigareti, hišni ljubljenčki, vlaga.</p>
+        <p>Ozonsko razkuževanje in odstranitev neprijetnih vonjav.</p>
       </div>
       <div class="service-card" data-reveal>
-        <div class="service-icon"><i class="fa-solid fa-tractor"></i></div>
+        <div class="service-icon"><svg class="icon"><use href="#i-tractor"></use></svg></div>
         <h3>Gospodarska in kmetijska vozila</h3>
-        <p>Čiščenje kabin tovornjakov, dostavnih vozil, traktorjev in druge delovne mehanizacije.</p>
+        <p>Čiščenje kabin tovornjakov, dostavnih vozil in traktorjev.</p>
       </div>
     </div>
   </div>
@@ -673,9 +818,9 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 <section class="process section" id="kako-poteka">
   <div class="container">
     <div class="section-head" data-reveal>
-      <span class="eyebrow"><i class="fa-solid fa-route"></i> Kako poteka</span>
+      <span class="eyebrow"><svg class="icon"><use href="#i-send"></use></svg> Kako poteka</span>
       <h2>Štirje koraki do čistega vozila</h2>
-      <p>Brez prevoza in čakanja — celoten postopek poteka tam, kjer je vaše vozilo trenutno parkirano.</p>
+      <p>Vse poteka tam, kjer je vozilo trenutno parkirano.</p>
     </div>
     <div class="process-track">
       <div class="process-line"><div class="process-line-fill" id="processFill"></div></div>
@@ -683,22 +828,22 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
         <div class="process-step" data-reveal>
           <span class="num-dot">01</span>
           <h3>Povpraševanje</h3>
-          <p>Pišete ali pokličete in nam poveste vrsto vozila ter kaj vas pri njem najbolj moti.</p>
+          <p>Sporočite vrsto vozila in vaše želje.</p>
         </div>
         <div class="process-step" data-reveal>
           <span class="num-dot">02</span>
           <h3>Dogovor o terminu</h3>
-          <p>Skupaj določimo datum, uro in lokacijo — pri vas doma, v službi ali kjerkoli vam ustreza.</p>
+          <p>Določimo termin in lokacijo čiščenja.</p>
         </div>
         <div class="process-step" data-reveal>
           <span class="num-dot">03</span>
           <h3>Čiščenje na lokaciji</h3>
-          <p>Pripeljemo vso potrebno opremo in vozilo temeljito očistimo na mestu, kjer je parkirano.</p>
+          <p>Pripeljemo opremo in očistimo vozilo pri vas.</p>
         </div>
         <div class="process-step" data-reveal>
           <span class="num-dot">04</span>
           <h3>Pregled in predaja</h3>
-          <p>Skupaj preverimo rezultat, plačilo poteka na mestu — vozilo pa zadiši kot novo.</p>
+          <p>Pregled in plačilo na mestu — vozilo kot novo.</p>
         </div>
       </div>
     </div>
@@ -709,37 +854,38 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 <section class="gallery section" id="galerija">
   <div class="container">
     <div class="section-head" data-reveal>
-      <span class="eyebrow"><i class="fa-solid fa-images"></i> Galerija</span>
+      <span class="eyebrow"><svg class="icon"><use href="#i-images"></use></svg> Galerija</span>
       <h2>Naše delo govori zase</h2>
-      <p>Izbor nedavno očiščenih vozil — od mestnih avtomobilov do gospodarske mehanizacije.</p>
+      <p>Izbor nedavno očiščenih vozil.</p>
+      <p class="gallery-hint"><svg class="icon"><use href="#i-swap"></use></svg> Povleci za več</p>
     </div>
     <div class="gallery-grid" data-reveal>
       <div class="gallery-item tall" data-caption="Globinsko čiščenje sedežev in armaturne plošče">
-        <img src="data:image/jpeg;base64,GALLERY1_B64" alt="Čiščenje armaturne plošče in konzole" loading="lazy">
+        <img src="images/gallery1.jpg" alt="Čiščenje armaturne plošče in konzole" loading="lazy">
         <div class="gallery-caption">Armaturna plošča in konzola</div>
       </div>
       <div class="gallery-item" data-caption="Sesanje in čiščenje zadnjih sedežev">
-        <img src="data:image/jpeg;base64,GALLERY2_B64" alt="Očiščeni zadnji sedeži" loading="lazy">
+        <img src="images/gallery2.jpg" alt="Očiščeni zadnji sedeži" loading="lazy">
         <div class="gallery-caption">Zadnji sedeži</div>
       </div>
       <div class="gallery-item" data-caption="Temeljito očiščen prtljažnik">
-        <img src="data:image/jpeg;base64,GALLERY3_B64" alt="Očiščen prtljažnik" loading="lazy">
+        <img src="images/gallery3.jpg" alt="Očiščen prtljažnik" loading="lazy">
         <div class="gallery-caption">Prtljažnik</div>
       </div>
-      <div class="gallery-item tall" data-caption="Čiščenje kabin kmetijske mehanizacije">
-        <img src="data:image/jpeg;base64,TRACTOR_B64" alt="Očiščena kabina traktorja" loading="lazy">
+      <div class="gallery-item" data-caption="Čiščenje kabin kmetijske mehanizacije">
+        <img src="images/tractor.jpg" alt="Očiščena kabina traktorja" loading="lazy">
         <div class="gallery-caption">Kmetijska in gospodarska vozila</div>
       </div>
       <div class="gallery-item" data-caption="Velik prtljažnik SUV po čiščenju">
-        <img src="data:image/jpeg;base64,GALLERY4_B64" alt="Očiščen prtljažnik SUV" loading="lazy">
+        <img src="images/gallery4.jpg" alt="Očiščen prtljažnik SUV" loading="lazy">
         <div class="gallery-caption">Prtljažnik SUV</div>
       </div>
       <div class="gallery-item" data-caption="Notranjost kabine po čiščenju">
-        <img src="data:image/jpeg;base64,GALLERY5_B64" alt="Očiščena notranjost vozila" loading="lazy">
+        <img src="images/gallery5.jpg" alt="Očiščena notranjost vozila" loading="lazy">
         <div class="gallery-caption">Notranjost kabine</div>
       </div>
       <div class="gallery-item" data-caption="Ročno sesanje za popoln rezultat">
-        <img src="data:image/jpeg;base64,VACUUM_B64" alt="Sesanje talnih oblog" loading="lazy">
+        <img src="images/vacuum.jpg" alt="Sesanje talnih oblog" loading="lazy">
         <div class="gallery-caption">Ročno sesanje</div>
       </div>
     </div>
@@ -750,13 +896,13 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 <section class="pricing section" id="cenik">
   <div class="container">
     <div class="section-head" data-reveal>
-      <span class="eyebrow"><i class="fa-solid fa-tags"></i> Cenik</span>
+      <span class="eyebrow"><svg class="icon"><use href="#i-tag"></use></svg> Cenik</span>
       <h2>Pregledni paketi čiščenja</h2>
-      <p>Osnovne cene za osebna vozila. Dejanska cena je odvisna od velikosti, stanja in opremljenosti vozila.</p>
+      <p>Cena je odvisna od velikosti in stanja vozila.</p>
     </div>
     <div class="pricing-note" data-reveal>
-      <i class="fa-solid fa-circle-info"></i>
-      <span>Cene so okvirne in veljajo za standardna osebna vozila. Za večja vozila (kombi, terenska vozila, gospodarska in kmetijska mehanizacija) vam po ogledu pripravimo natančno ponudbo brez obveznosti.</span>
+      <svg class="icon"><use href="#i-info"></use></svg>
+      <span>Cene veljajo za standardna osebna vozila. Za večja in gospodarska vozila pripravimo ponudbo po ogledu.</span>
     </div>
     <div class="pricing-grid">
       <div class="price-card" data-reveal>
@@ -764,10 +910,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
         <p class="price-desc">Hitra osvežitev notranjosti</p>
         <div class="price">od 25 € <span>/ vozilo</span></div>
         <ul class="price-features">
-          <li><i class="fa-solid fa-check"></i> Sesanje celotne notranjosti</li>
-          <li><i class="fa-solid fa-check"></i> Čiščenje plastičnih površin in armaturne plošče</li>
-          <li><i class="fa-solid fa-check"></i> Čiščenje stekel od znotraj</li>
-          <li><i class="fa-solid fa-check"></i> Osvežilec zraka</li>
+          <li><svg class="icon"><use href="#i-check"></use></svg> Sesanje celotne notranjosti</li>
+          <li><svg class="icon"><use href="#i-check"></use></svg> Čiščenje plastičnih površin in armaturne plošče</li>
+          <li><svg class="icon"><use href="#i-check"></use></svg> Čiščenje stekel od znotraj</li>
+          <li><svg class="icon"><use href="#i-check"></use></svg> Osvežilec zraka</li>
         </ul>
         <a href="#kontakt" class="btn btn-outline btn-block">Povpraševanje</a>
       </div>
@@ -777,10 +923,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
         <p class="price-desc">Globinska osvežitev notranjosti</p>
         <div class="price">od 45 € <span>/ vozilo</span></div>
         <ul class="price-features">
-          <li><i class="fa-solid fa-check"></i> Vse iz paketa Osnovno</li>
-          <li><i class="fa-solid fa-check"></i> Globinsko / parno čiščenje sedežev in tekstila</li>
-          <li><i class="fa-solid fa-check"></i> Čiščenje talnih oblog in predpražnikov</li>
-          <li><i class="fa-solid fa-check"></i> Osnovno razkuževanje notranjosti</li>
+          <li><svg class="icon"><use href="#i-check"></use></svg> Vse iz paketa Osnovno</li>
+          <li><svg class="icon"><use href="#i-check"></use></svg> Globinsko / parno čiščenje sedežev in tekstila</li>
+          <li><svg class="icon"><use href="#i-check"></use></svg> Čiščenje talnih oblog in predpražnikov</li>
+          <li><svg class="icon"><use href="#i-check"></use></svg> Osnovno razkuževanje notranjosti</li>
         </ul>
         <a href="#kontakt" class="btn btn-primary btn-block">Povpraševanje</a>
       </div>
@@ -789,10 +935,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
         <p class="price-desc">Notranjost in zunanjost kot novo</p>
         <div class="price">od 85 € <span>/ vozilo</span></div>
         <ul class="price-features">
-          <li><i class="fa-solid fa-check"></i> Vse iz paketa Standard</li>
-          <li><i class="fa-solid fa-check"></i> Ročno pranje in vosek karoserije</li>
-          <li><i class="fa-solid fa-check"></i> Čiščenje platišč in zaščita gum</li>
-          <li><i class="fa-solid fa-check"></i> Ozonsko razkuževanje in nega usnja</li>
+          <li><svg class="icon"><use href="#i-check"></use></svg> Vse iz paketa Standard</li>
+          <li><svg class="icon"><use href="#i-check"></use></svg> Ročno pranje in vosek karoserije</li>
+          <li><svg class="icon"><use href="#i-check"></use></svg> Čiščenje platišč in zaščita gum</li>
+          <li><svg class="icon"><use href="#i-check"></use></svg> Ozonsko razkuževanje in nega usnja</li>
         </ul>
         <a href="#kontakt" class="btn btn-outline btn-block">Povpraševanje</a>
       </div>
@@ -800,12 +946,12 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
     <div class="fleet-card" data-reveal>
       <div class="fleet-card-text">
         <h3>Gospodarska in kmetijska vozila</h3>
-        <p>Tovornjaki, dostavna vozila, traktorji in druga delovna mehanizacija — cena po ogledu glede na velikost in obseg dela.</p>
+        <p>Cena po ogledu, glede na velikost in obseg dela.</p>
       </div>
       <div class="fleet-icons">
-        <i class="fa-solid fa-truck"></i>
-        <i class="fa-solid fa-tractor"></i>
-        <i class="fa-solid fa-van-shuttle"></i>
+        <svg class="icon"><use href="#i-truck"></use></svg>
+        <svg class="icon"><use href="#i-tractor"></use></svg>
+        <svg class="icon"><use href="#i-van"></use></svg>
       </div>
       <a href="#kontakt" class="btn btn-primary">Povprašaj za ponudbo</a>
     </div>
@@ -816,21 +962,21 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 <section class="about section" id="o-nas">
   <div class="container about-grid">
     <div class="about-visual" data-reveal>
-      <img src="data:image/jpeg;base64,ABOUT_B64" alt="Notranjost vozila po čiščenju">
+      <img src="images/about.jpg" alt="Notranjost vozila po čiščenju">
       <div class="about-badge">
-        <img src="data:image/jpeg;base64,MASCOT_B64" alt="Čistkomobil maskota">
+        <img src="images/mascot.jpg" alt="Čistkomobil maskota">
         <p><strong>Čistkomobil</strong>Skrbno, zanesljivo in z veseljem do detajlov.</p>
       </div>
     </div>
     <div class="about-text" data-reveal>
-      <span class="eyebrow"><i class="fa-solid fa-location-dot"></i> O nas</span>
+      <span class="eyebrow"><svg class="icon"><use href="#i-pin"></use></svg> O nas</span>
       <h2>Lokalna ekipa s Ptuja, ki pride k vam</h2>
-      <p>Čistkomobil je mobilna ekipa za čiščenje vozil s sedežem na Ptuju. Specializirani smo za temeljito notranje in zunanje čiščenje — od mestnih avtomobilov do gospodarskih in kmetijskih vozil. Delo opravimo neposredno pri vas, z lastno profesionalno opremo in preverjenimi sredstvi, brez izgubljenega časa s prevozom ali čakanjem v vrsti.</p>
+      <p>Mobilna ekipa za čiščenje vozil s sedežem na Ptuju. Notranje in zunanje čiščenje — od osebnih do gospodarskih in kmetijskih vozil, z lastno opremo, neposredno pri vas.</p>
       <div class="about-features">
-        <div class="about-feature"><i class="fa-solid fa-screwdriver-wrench"></i><span>Lastna profesionalna opema</span></div>
-        <div class="about-feature"><i class="fa-solid fa-calendar-days"></i><span>Prilagodljivi termini, tudi ob vikendih</span></div>
-        <div class="about-feature"><i class="fa-solid fa-truck-monster"></i><span>Izkušnje z vsemi vrstami vozil</span></div>
-        <div class="about-feature"><i class="fa-solid fa-leaf"></i><span>Skrbno izbrana čistilna sredstva</span></div>
+        <div class="about-feature"><svg class="icon"><use href="#i-wrench"></use></svg><span>Lastna profesionalna oprema</span></div>
+        <div class="about-feature"><svg class="icon"><use href="#i-calendar"></use></svg><span>Termini tudi ob vikendih</span></div>
+        <div class="about-feature"><svg class="icon"><use href="#i-tractor"></use></svg><span>Izkušnje z vsemi vozili</span></div>
+        <div class="about-feature"><svg class="icon"><use href="#i-leaf"></use></svg><span>Preverjena čistilna sredstva</span></div>
       </div>
     </div>
   </div>
@@ -840,45 +986,45 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 <section class="contact section" id="kontakt">
   <div class="container">
     <div class="section-head" data-reveal>
-      <span class="eyebrow"><i class="fa-solid fa-calendar-check"></i> Kontakt</span>
+      <span class="eyebrow"><svg class="icon"><use href="#i-calendar-check"></use></svg> Kontakt</span>
       <h2>Rezerviraj termin</h2>
-      <p>Pišite, pokličite ali nas najdite na Facebooku — na povpraševanja se odzovemo hitro.</p>
+      <p>Odzovemo se hitro — pokličite, pišite ali nas najdite na Facebooku.</p>
     </div>
     <div class="contact-grid">
       <div data-reveal>
         <div class="contact-cards">
           <div class="contact-card">
-            <i class="fa-solid fa-phone"></i>
+            <svg class="icon"><use href="#i-phone"></use></svg>
             <h4>Telefon</h4>
             <a href="tel:+38651887853">051 887 853</a>
           </div>
           <div class="contact-card">
-            <i class="fa-solid fa-envelope"></i>
+            <svg class="icon"><use href="#i-mail"></use></svg>
             <h4>E-naslov</h4>
             <a href="mailto:cistkomobil14@gmail.com">cistkomobil14@gmail.com</a>
           </div>
           <div class="contact-card">
-            <i class="fa-solid fa-location-dot"></i>
+            <svg class="icon"><use href="#i-pin"></use></svg>
             <h4>Naslov</h4>
             <p>Trstenjakova ulica 5<br>2250 Ptuj</p>
           </div>
           <div class="contact-card">
-            <i class="fa-solid fa-route"></i>
+            <svg class="icon"><use href="#i-send"></use></svg>
             <h4>Območje delovanja</h4>
             <p>Ptuj in okolica (do 30 km), po dogovoru tudi dlje</p>
           </div>
           <div class="contact-card">
-            <i class="fa-solid fa-clock"></i>
+            <svg class="icon"><use href="#i-clock"></use></svg>
             <h4>Delovni čas</h4>
             <p>Pon–Pet: 8.00–18.00<br>Sob: 9.00–14.00</p>
           </div>
           <div class="contact-card">
-            <i class="fa-brands fa-facebook-f"></i>
+            <svg class="icon icon-fill"><use href="#i-facebook"></use></svg>
             <h4>Facebook</h4>
             <a href="https://www.facebook.com/profile.php?id=61585264907821" target="_blank" rel="noopener">Čistkomobil</a>
           </div>
         </div>
-        <a href="tel:+38651887853" class="btn btn-primary contact-cta"><i class="fa-solid fa-phone"></i> Pokliči zdaj</a>
+        <a href="tel:+38651887853" class="btn btn-primary contact-cta"><svg class="icon"><use href="#i-phone"></use></svg> Pokliči zdaj</a>
       </div>
       <div class="map-wrap" data-reveal>
         <iframe src="https://maps.google.com/maps?q=Trstenjakova%20ulica%205%2C%202250%20Ptuj&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokacija Čistkomobil na zemljevidu"></iframe>
@@ -893,14 +1039,14 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="#" class="logo">
-          <span class="logo-mark"><i class="fa-solid fa-droplet"></i></span>
+          <img class="logo-mark" src="images/logo.png" alt="Čistkomobil logo">
           Čistko<span class="accent">mobil</span>
         </a>
         <p>Mobilno čiščenje notranjosti in zunanjosti vozil. Pridemo k vam — Ptuj in okolica.</p>
         <div class="footer-social">
-          <a href="https://www.facebook.com/profile.php?id=61585264907821" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="mailto:cistkomobil14@gmail.com" aria-label="E-naslov"><i class="fa-solid fa-envelope"></i></a>
-          <a href="tel:+38651887853" aria-label="Telefon"><i class="fa-solid fa-phone"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61585264907821" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon icon-fill"><use href="#i-facebook"></use></svg></a>
+          <a href="mailto:cistkomobil14@gmail.com" aria-label="E-naslov"><svg class="icon"><use href="#i-mail"></use></svg></a>
+          <a href="tel:+38651887853" aria-label="Telefon"><svg class="icon"><use href="#i-phone"></use></svg></a>
         </div>
       </div>
       <div class="footer-col">
@@ -941,7 +1087,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 
 <!-- ============ LIGHTBOX ============ -->
 <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Zapri"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lightbox-close" id="lightboxClose" aria-label="Zapri"><svg class="icon"><use href="#i-x"></use></svg></button>
   <div class="lightbox-inner">
     <img id="lightboxImg" src="" alt="">
     <div class="lightbox-caption" id="lightboxCaption"></div>
@@ -961,14 +1107,19 @@ window.addEventListener('scroll', () => {
 // Mobile menu
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
+const navBackdrop = document.getElementById('navBackdrop');
+function closeMenu(){
+  hamburger.classList.remove('active');
+  navLinks.classList.remove('active');
+  navBackdrop.classList.remove('active');
+}
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
   navLinks.classList.toggle('active');
+  navBackdrop.classList.toggle('active');
 });
-navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  hamburger.classList.remove('active');
-  navLinks.classList.remove('active');
-}));
+navBackdrop.addEventListener('click', closeMenu);
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
 // Scroll reveal
 const revealEls = document.querySelectorAll('[data-reveal]');
@@ -996,24 +1147,6 @@ if (processTrack) {
   }, {threshold: 0.3});
   processObserver.observe(processTrack);
 }
-
-// Floating particles
-(function(){
-  const container = document.getElementById('particles');
-  const count = 14;
-  for (let i = 0; i < count; i++) {
-    const p = document.createElement('div');
-    p.className = 'particle';
-    const size = Math.random() * 70 + 20;
-    p.style.width = size + 'px';
-    p.style.height = size + 'px';
-    p.style.left = Math.random() * 100 + '%';
-    p.style.setProperty('--drift', (Math.random() * 80 - 40) + 'px');
-    p.style.animationDuration = (Math.random() * 14 + 14) + 's';
-    p.style.animationDelay = (Math.random() * -26) + 's';
-    container.appendChild(p);
-  }
-})();
 
 // Service ticket cycle (signature element)
 (function(){
