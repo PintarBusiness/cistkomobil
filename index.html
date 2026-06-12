@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0F18">
+<title>Čistkomobil — Mobilno čiščenje vozil | Ptuj in okolica</title>
+<meta name="description" content="Profesionalno mobilno čiščenje notranjosti in zunanjosti vozil na Ptuju in v okolici. Pridemo k vam — osebna, gospodarska in kmetijska vozila. Pokličite: 051 887 853.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230A0F18'/%3E%3Cpath d='M50 16C50 16 26 46 26 64a24 24 0 0 0 48 0c0-18-24-48-24-48z' fill='%232F8CF0'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "Čistkomobil",
+  "description": "Mobilno čiščenje notranjosti in zunanjosti vozil na lokaciji stranke.",
+  "telephone": "+386 51 887 853",
+  "email": "cistkomobil14@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Trstenjakova ulica 5",
+    "addressLocality": "Ptuj",
+    "postalCode": "2250",
+    "addressCountry": "SI"
+  },
+  "areaServed": "Ptuj in okolica",
+  "sameAs": ["https://www.facebook.com/profile.php?id=61585264907821"],
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}
+  ]
+}
+</script>
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --ink-950:#0A0F18;
+  --ink-900:#101A29;
+  --ink-800:#1C2A40;
+  --ink-700:#2A3C5A;
+  --blue-500:#2F8CF0;
+  --blue-400:#62ABF8;
+  --blue-glow:rgba(47,140,240,.35);
+  --mint-400:#4FE8C9;
+  --paper-50:#F5F8FC;
+  --paper-100:#EBF0F6;
+  --paper-200:#DDE6EF;
+  --slate-900:#101826;
+  --slate-700:#3C4E64;
+  --slate-500:#6C7E92;
+  --slate-400:#8FA0B3;
+  --slate-300:#B7C5D4;
+  --white:#FFFFFF;
+  --radius-xl:24px;
+  --radius-lg:18px;
+  --radius-md:12px;
+  --radius-sm:8px;
+  --shadow-lg:0 24px 64px -24px rgba(10,15,24,.35);
+  --shadow-dark:0 24px 64px -24px rgba(0,0,0,.6);
+  --ease:cubic-bezier(.22,1,.36,1);
+  --font-display:'Space Grotesk',sans-serif;
+  --font-body:'Inter',sans-serif;
+  --font-mono:'JetBrains Mono',monospace;
+}
+
+/* ============ RESET ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--font-body);
+  color:var(--slate-900);
+  background:var(--paper-50);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit;}
+.container{max-width:1240px;margin:0 auto;padding:0 24px;}
+@media(min-width:768px){.container{padding:0 40px;}}
+
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;letter-spacing:-.02em;color:var(--ink-950);}
+
+.section{padding:clamp(64px,10vw,128px) 0;}
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:.78rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--blue-500);
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+}
+.eyebrow::before{
+  content:'';
+  width:18px;height:1px;
+  background:var(--blue-500);
+  display:inline-block;
+}
+.section-head{max-width:680px;}
+.section-head h2{font-size:clamp(1.9rem,4vw,2.85rem);margin-top:14px;}
+.section-head p{color:var(--slate-500);margin-top:16px;font-size:1.05rem;}
+.section-head.center{margin:0 auto;text-align:center;}
+.section-head.center .eyebrow{justify-content:center;}
+.section-head.center .eyebrow::before{display:none;}
+
+/* ============ SCROLL REVEAL ============ */
+[data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease), transform .8s var(--ease);}
+[data-reveal].is-visible{opacity:1;transform:translateY(0);}
+@media(prefers-reduced-motion:reduce){
+  [data-reveal]{opacity:1;transform:none;transition:none;}
+  *{animation-duration:.001ms !important; animation-iteration-count:1 !important;}
+}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:16px 30px;border-radius:999px;
+  font-weight:600;font-size:.95rem;
+  border:1px solid transparent;cursor:pointer;
+  transition:transform .25s var(--ease), box-shadow .25s var(--ease), background .25s, border-color .25s;
+  white-space:nowrap;
+}
+.btn-primary{background:var(--blue-500);color:#fff;box-shadow:0 14px 32px -10px var(--blue-glow);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px -10px var(--blue-glow);}
+.btn-ghost{border-color:rgba(255,255,255,.22);color:#fff;background:transparent;}
+.btn-ghost:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.06);}
+.btn-outline{border-color:var(--paper-200);color:var(--ink-950);background:transparent;}
+.btn-outline:hover{border-color:var(--blue-500);color:var(--blue-500);}
+.btn-block{width:100%;justify-content:center;}
+.btn i{font-size:.9em;}
+
+/* ============ NAV ============ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:22px 0;
+  transition:padding .35s var(--ease), background .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+  border-bottom:1px solid transparent;
+}
+.nav.scrolled{
+  background:rgba(10,15,24,.78);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  padding:14px 0;
+  box-shadow:0 10px 30px -16px rgba(0,0,0,.5);
+  border-bottom-color:rgba(255,255,255,.06);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--font-display);font-weight:700;font-size:1.28rem;color:#fff;letter-spacing:-.01em;}
+.logo-mark{
+  width:38px;height:38px;border-radius:11px;
+  background:linear-gradient(135deg,var(--blue-500),var(--mint-400));
+  display:flex;align-items:center;justify-content:center;
+  color:var(--ink-950);font-size:1.05rem;flex-shrink:0;
+}
+.logo .accent{color:var(--blue-400);}
+.nav-links{display:flex;gap:34px;align-items:center;}
+.nav-links a{font-size:.95rem;font-weight:500;color:rgba(255,255,255,.78);transition:color .2s;position:relative;}
+.nav-links a:hover{color:#fff;}
+.nav-right{display:flex;align-items:center;gap:18px;}
+.nav-phone{display:flex;align-items:center;gap:8px;color:#fff;font-family:var(--font-mono);font-size:.92rem;font-weight:500;}
+.nav-phone i{color:var(--blue-400);}
+
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:30px;height:30px;cursor:pointer;background:none;border:0;padding:0;z-index:1100;}
+.hamburger span{display:block;width:100%;height:2px;background:#fff;border-radius:2px;transition:all .3s var(--ease);}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.active span:nth-child(2){opacity:0;}
+.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+@media(max-width:920px){
+  .nav-links{
+    position:fixed;top:0;right:-100%;height:100vh;width:min(320px,82vw);
+    background:var(--ink-950);
+    flex-direction:column;justify-content:center;align-items:flex-start;
+    padding:40px;gap:30px;
+    transition:right .45s var(--ease);
+    box-shadow:-30px 0 60px rgba(0,0,0,.35);
+  }
+  .nav-links.active{right:0;}
+  .nav-links a{font-size:1.15rem;}
+  .nav-phone{display:none;}
+  .hamburger{display:flex;}
+  .nav-cta-mobile{margin-top:10px;}
+}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;align-items:center;
+  background:linear-gradient(165deg,var(--ink-950) 0%,var(--ink-900) 55%,var(--ink-800) 100%);
+  overflow:hidden;
+  padding-top:130px;padding-bottom:90px;
+  color:#fff;
+}
+.hero-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none;}
+.hero-bg .grid-pattern{
+  position:absolute;inset:-2px;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(circle at 30% 30%, rgba(0,0,0,.9), transparent 70%);
+}
+.particle{
+  position:absolute;bottom:-120px;border-radius:50%;
+  background:radial-gradient(circle at 32% 32%, rgba(98,171,248,.55), rgba(79,232,201,.05) 72%);
+  filter:blur(1px);
+  animation:float-up linear infinite;
+}
+@keyframes float-up{
+  0%{transform:translateY(0) translateX(0) scale(1);opacity:0;}
+  10%{opacity:.55;}
+  90%{opacity:.45;}
+  100%{transform:translateY(-115vh) translateX(var(--drift,30px)) scale(1.2);opacity:0;}
+}
+
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:64px;align-items:center;position:relative;z-index:2;}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:56px;}}
+
+.hero-text h1{font-size:clamp(2.6rem,6.2vw,4.7rem);margin:20px 0 24px;color:#fff;}
+.hero-text h1 .grad{background:linear-gradient(100deg,var(--blue-400),var(--mint-400));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.hero-text p.lead{font-size:1.15rem;color:var(--slate-300);max-width:520px;margin-bottom:36px;}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:32px;}
+.hero-meta{display:flex;gap:28px;flex-wrap:wrap;font-family:var(--font-mono);font-size:.82rem;color:var(--slate-400);}
+.hero-meta span{display:flex;align-items:center;gap:8px;}
+.hero-meta i{color:var(--mint-400);font-size:.85em;}
+
+.hero-visual-wrap{position:relative;}
+.hero-visual{
+  position:relative;border-radius:var(--radius-xl);overflow:hidden;
+  box-shadow:var(--shadow-dark);
+  border:1px solid rgba(255,255,255,.08);
+  aspect-ratio:6/4.4;
+}
+.hero-visual img{width:100%;height:100%;object-fit:cover;}
+.hero-visual::after{
+  content:'';position:absolute;top:-60%;left:-160%;width:55%;height:220%;
+  background:linear-gradient(75deg,transparent 35%,rgba(255,255,255,.22) 50%,transparent 65%);
+  animation:shine 7s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes shine{0%,35%{left:-160%;}65%,100%{left:160%;}}
+
+/* signature element: floating service ticket */
+.service-ticket{
+  position:absolute;left:-28px;bottom:-46px;width:248px;
+  background:rgba(16,24,38,.74);
+  border:1px solid rgba(255,255,255,.1);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-radius:var(--radius-lg);
+  padding:20px 22px;
+  box-shadow:var(--shadow-dark);
+  z-index:3;
+}
+.ticket-head{display:flex;align-items:center;gap:9px;margin-bottom:14px;}
+.ticket-dot{width:8px;height:8px;border-radius:50%;background:var(--mint-400);animation:pulse 2s infinite;flex-shrink:0;}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(79,232,201,.6);}
+  70%{box-shadow:0 0 0 8px rgba(79,232,201,0);}
+  100%{box-shadow:0 0 0 0 rgba(79,232,201,0);}
+}
+.ticket-label{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate-300);}
+.ticket-list li{
+  display:flex;align-items:center;gap:10px;
+  font-family:var(--font-mono);font-size:.78rem;color:var(--slate-400);
+  padding:5px 0;transition:color .35s var(--ease);
+}
+.ticket-list li .check{
+  width:15px;height:15px;border-radius:5px;border:1.5px solid var(--slate-500);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  transition:all .35s var(--ease);
+}
+.ticket-list li .check::after{
+  content:'';width:7px;height:4px;border-left:1.5px solid #fff;border-bottom:1.5px solid #fff;
+  transform:rotate(-45deg) translate(1px,-1px);opacity:0;transition:opacity .2s;
+}
+.ticket-list li.done{color:#fff;}
+.ticket-list li.done .check{background:var(--blue-500);border-color:var(--blue-500);}
+.ticket-list li.done .check::after{opacity:1;}
+.ticket-progress{height:4px;background:rgba(255,255,255,.08);border-radius:99px;margin-top:14px;overflow:hidden;}
+.ticket-progress-bar{height:100%;width:0%;background:linear-gradient(90deg,var(--blue-500),var(--mint-400));transition:width .5s var(--ease);border-radius:99px;}
+
+@media(max-width:980px){
+  .service-ticket{position:static;width:100%;margin-top:18px;left:0;bottom:0;}
+}
+@media(max-width:520px){
+  .hero{padding-top:110px;}
+}
+
+/* ============ TRUST BAR ============ */
+.trust-section{position:relative;z-index:5;margin-top:-64px;padding:0 0 0;}
+.trust-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  background:#fff;border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-lg);overflow:hidden;
+}
+.trust-item{padding:30px 26px;border-right:1px solid var(--paper-200);}
+.trust-item:last-child{border-right:none;}
+.trust-item i{font-size:1.5rem;color:var(--blue-500);margin-bottom:14px;display:block;}
+.trust-item h4{font-size:.98rem;margin-bottom:6px;}
+.trust-item p{font-size:.86rem;color:var(--slate-500);}
+@media(max-width:920px){
+  .trust-grid{grid-template-columns:repeat(2,1fr);}
+  .trust-item{border-right:1px solid var(--paper-200);border-bottom:1px solid var(--paper-200);}
+  .trust-item:nth-child(2n){border-right:none;}
+  .trust-item:nth-last-child(-n+2){border-bottom:none;}
+}
+@media(max-width:520px){
+  .trust-grid{grid-template-columns:1fr;}
+  .trust-item{border-right:none !important;border-bottom:1px solid var(--paper-200);}
+  .trust-item:last-child{border-bottom:none;}
+}
+
+/* ============ SERVICES ============ */
+.services{background:var(--paper-50);}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;}
+@media(max-width:980px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:620px){.services-grid{grid-template-columns:1fr;}}
+.service-card{
+  background:#fff;border:1px solid var(--paper-200);border-radius:var(--radius-lg);
+  padding:34px 30px;
+  transition:transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent;}
+.service-icon{
+  width:54px;height:54px;border-radius:14px;
+  background:linear-gradient(135deg,var(--blue-500),var(--mint-400));
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:1.35rem;margin-bottom:22px;
+}
+.service-card h3{font-size:1.15rem;margin-bottom:10px;}
+.service-card p{color:var(--slate-500);font-size:.95rem;}
+
+/* ============ PROCESS ============ */
+.process{background:var(--ink-950);color:#fff;}
+.process .section-head p{color:var(--slate-400);}
+.process .eyebrow{color:var(--mint-400);}
+.process .eyebrow::before{background:var(--mint-400);}
+.process-track{position:relative;margin-top:64px;}
+.process-line{position:absolute;top:13px;left:0;right:0;height:1px;background:var(--ink-800);overflow:hidden;}
+.process-line-fill{position:absolute;inset:0;width:0%;background:linear-gradient(90deg,var(--blue-500),var(--mint-400));transition:width 1.4s var(--ease);}
+.process-list{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;position:relative;}
+.process-step .num-dot{
+  width:26px;height:26px;border-radius:50%;border:1.5px solid var(--ink-700);
+  background:var(--ink-950);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-mono);font-size:.72rem;color:var(--blue-400);
+  margin-bottom:22px;position:relative;z-index:2;
+}
+.process-step h3{font-size:1.18rem;margin-bottom:10px;color:#fff;}
+.process-step p{color:var(--slate-400);font-size:.92rem;}
+@media(max-width:880px){
+  .process-list{grid-template-columns:1fr;gap:40px;}
+  .process-line{display:none;}
+}
+
+/* ============ GALLERY ============ */
+.gallery{background:var(--paper-50);}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:16px;margin-top:56px;}
+.gallery-item{position:relative;border-radius:var(--radius-md);overflow:hidden;cursor:pointer;grid-row:span 1;}
+.gallery-item.tall{grid-row:span 2;}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease);}
+.gallery-item:hover img{transform:scale(1.08);}
+.gallery-caption{
+  position:absolute;inset:auto 0 0 0;padding:16px;
+  background:linear-gradient(to top,rgba(10,15,24,.88),transparent);
+  color:#fff;font-size:.85rem;font-weight:500;
+  opacity:0;transform:translateY(8px);
+  transition:all .35s var(--ease);
+}
+.gallery-item:hover .gallery-caption{opacity:1;transform:translateY(0);}
+.gallery-item::before{
+  content:'\f00e';font-family:'Font Awesome 6 Free';font-weight:900;
+  position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;
+  background:rgba(10,15,24,.55);color:#fff;font-size:.78rem;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity .3s;backdrop-filter:blur(6px);
+}
+.gallery-item:hover::before{opacity:1;}
+@media(max-width:920px){
+  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px;}
+  .gallery-item.tall{grid-row:span 2;}
+}
+@media(max-width:560px){
+  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px;gap:10px;}
+}
+
+/* lightbox */
+.lightbox{
+  position:fixed;inset:0;background:rgba(8,12,20,.92);
+  display:flex;align-items:center;justify-content:center;
+  z-index:2000;opacity:0;pointer-events:none;
+  transition:opacity .3s var(--ease);padding:28px;
+}
+.lightbox.active{opacity:1;pointer-events:auto;}
+.lightbox-inner{max-width:90vw;max-height:85vh;text-align:center;}
+.lightbox img{max-width:90vw;max-height:78vh;border-radius:var(--radius-md);box-shadow:0 30px 80px rgba(0,0,0,.5);margin:0 auto;}
+.lightbox-caption{color:var(--slate-300);font-family:var(--font-mono);font-size:.85rem;margin-top:16px;}
+.lightbox-close{
+  position:absolute;top:24px;right:24px;width:44px;height:44px;border-radius:50%;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:1.2rem;cursor:pointer;
+  transition:background .2s;
+}
+.lightbox-close:hover{background:rgba(255,255,255,.16);}
+
+/* ============ PRICING ============ */
+.pricing{background:var(--paper-100);}
+.pricing-note{
+  display:flex;align-items:flex-start;gap:12px;
+  background:#fff;border:1px solid var(--paper-200);border-radius:var(--radius-md);
+  padding:18px 22px;margin-top:40px;font-size:.92rem;color:var(--slate-500);max-width:760px;
+}
+.pricing-note i{color:var(--blue-500);margin-top:3px;}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px;align-items:stretch;}
+@media(max-width:980px){.pricing-grid{grid-template-columns:1fr;max-width:480px;margin-inline:auto;}}
+.price-card{
+  background:#fff;border:1px solid var(--paper-200);border-radius:var(--radius-xl);
+  padding:38px 32px;display:flex;flex-direction:column;position:relative;
+  transition:transform .35s var(--ease), box-shadow .35s var(--ease);
+}
+.price-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+.price-card.featured{background:var(--ink-950);color:#fff;border-color:var(--ink-950);}
+.price-card.featured h3, .price-card.featured .price{color:#fff;}
+.price-card.featured .price span{color:var(--slate-400);}
+.price-card.featured .price-features li{color:var(--slate-300);}
+.price-card .badge{
+  position:absolute;top:-14px;right:32px;background:var(--blue-500);color:#fff;
+  font-family:var(--font-mono);font-size:.68rem;letter-spacing:.12em;
+  padding:7px 16px;border-radius:99px;text-transform:uppercase;
+}
+.price-card h3{font-size:1.3rem;margin-bottom:6px;}
+.price-card .price-desc{color:var(--slate-500);font-size:.9rem;}
+.price-card.featured .price-desc{color:var(--slate-400);}
+.price-card .price{font-family:var(--font-display);font-size:2.3rem;margin:18px 0 24px;}
+.price-card .price span{font-size:.98rem;font-weight:500;color:var(--slate-500);}
+.price-features{flex:1;margin-bottom:30px;}
+.price-features li{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;color:var(--slate-700);margin-bottom:13px;}
+.price-features li i{color:var(--blue-500);margin-top:3px;font-size:.85em;}
+
+.fleet-card{
+  margin-top:24px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+  background:linear-gradient(120deg,var(--ink-950),var(--ink-800));color:#fff;
+  border-radius:var(--radius-xl);padding:36px 38px;
+}
+.fleet-card-text h3{color:#fff;font-size:1.3rem;margin-bottom:8px;}
+.fleet-card-text p{color:var(--slate-400);font-size:.95rem;max-width:480px;}
+.fleet-icons{display:flex;gap:14px;font-size:1.5rem;color:var(--blue-400);}
+
+/* ============ ABOUT ============ */
+.about{background:var(--paper-50);}
+.about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center;}
+@media(max-width:980px){.about-grid{grid-template-columns:1fr;gap:48px;}}
+.about-visual{position:relative;}
+.about-visual img{border-radius:var(--radius-xl);box-shadow:var(--shadow-lg);width:100%;aspect-ratio:4/3;object-fit:cover;}
+.about-badge{
+  position:absolute;bottom:-28px;right:-28px;
+  background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);
+  padding:14px;display:flex;align-items:center;gap:14px;max-width:260px;
+  border:1px solid var(--paper-200);
+}
+.about-badge img{width:58px;height:58px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+.about-badge p{font-size:.85rem;color:var(--slate-500);line-height:1.4;}
+.about-badge strong{display:block;color:var(--ink-950);font-size:.92rem;margin-bottom:2px;}
+@media(max-width:560px){.about-badge{position:static;margin-top:18px;max-width:none;}}
+.about-text h2{font-size:clamp(1.9rem,4vw,2.8rem);margin:14px 0 18px;}
+.about-text > p{color:var(--slate-500);margin-bottom:28px;}
+.about-features{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+@media(max-width:520px){.about-features{grid-template-columns:1fr;}}
+.about-feature{display:flex;gap:12px;align-items:flex-start;}
+.about-feature i{
+  width:32px;height:32px;border-radius:9px;background:var(--paper-100);
+  display:flex;align-items:center;justify-content:center;color:var(--blue-500);
+  flex-shrink:0;font-size:.92rem;
+}
+.about-feature span{font-size:.92rem;color:var(--slate-700);font-weight:500;}
+
+/* ============ CONTACT ============ */
+.contact{background:var(--ink-950);color:#fff;}
+.contact .section-head p{color:var(--slate-400);}
+.contact .eyebrow{color:var(--mint-400);}
+.contact .eyebrow::before{background:var(--mint-400);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:56px;align-items:start;}
+@media(max-width:980px){.contact-grid{grid-template-columns:1fr;gap:40px;}}
+.contact-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+@media(max-width:480px){.contact-cards{grid-template-columns:1fr;}}
+.contact-card{
+  background:var(--ink-900);border:1px solid var(--ink-800);border-radius:var(--radius-md);
+  padding:24px;transition:border-color .3s, transform .3s var(--ease);
+}
+.contact-card:hover{border-color:var(--blue-500);transform:translateY(-3px);}
+.contact-card i{color:var(--blue-400);font-size:1.35rem;margin-bottom:14px;display:block;}
+.contact-card h4{color:#fff;font-size:.95rem;margin-bottom:6px;}
+.contact-card p, .contact-card a{color:var(--slate-400);font-size:.9rem;}
+.contact-card a:hover{color:var(--blue-400);}
+.contact-cta{margin-top:24px;}
+.map-wrap{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--ink-800);min-height:380px;}
+.map-wrap iframe{width:100%;height:100%;min-height:380px;border:0;display:block;filter:grayscale(.25) contrast(1.05);}
+
+/* ============ FOOTER ============ */
+.footer{background:var(--ink-950);border-top:1px solid var(--ink-800);padding:56px 0 28px;color:var(--slate-400);}
+.footer-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:40px;}
+.footer-brand .logo{margin-bottom:14px;}
+.footer-brand p{max-width:300px;font-size:.9rem;}
+.footer-col h4{color:#fff;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;font-family:var(--font-mono);margin-bottom:16px;}
+.footer-col ul{display:flex;flex-direction:column;gap:10px;}
+.footer-col a{font-size:.92rem;transition:color .2s;}
+.footer-col a:hover{color:#fff;}
+.footer-social{display:flex;gap:12px;margin-top:16px;}
+.footer-social a{
+  width:38px;height:38px;border-radius:50%;border:1px solid var(--ink-800);
+  display:flex;align-items:center;justify-content:center;color:var(--slate-300);
+  transition:all .25s var(--ease);
+}
+.footer-social a:hover{background:var(--blue-500);border-color:var(--blue-500);color:#fff;}
+.footer-bottom{
+  margin-top:48px;padding-top:24px;border-top:1px solid var(--ink-800);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.85rem;
+}
+.footer-bottom a{color:var(--slate-400);transition:color .2s;}
+.footer-bottom a:hover{color:var(--blue-400);}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark"><i class="fa-solid fa-droplet"></i></span>
+      Čistko<span class="accent">mobil</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#storitve">Storitve</a></li>
+      <li><a href="#kako-poteka">Kako poteka</a></li>
+      <li><a href="#galerija">Galerija</a></li>
+      <li><a href="#cenik">Cenik</a></li>
+      <li><a href="#o-nas">O nas</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+      <li class="nav-cta-mobile"><a href="#kontakt" class="btn btn-primary btn-block"><i class="fa-solid fa-calendar-check"></i> Rezerviraj termin</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:+38651887853" class="nav-phone"><i class="fa-solid fa-phone"></i> 051 887 853</a>
+      <a href="#kontakt" class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> Rezerviraj termin</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Meni">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-bg">
+    <div class="grid-pattern"></div>
+    <div id="particles"></div>
+  </div>
+  <div class="container hero-grid">
+    <div class="hero-text" data-reveal>
+      <span class="eyebrow"><i class="fa-solid fa-route"></i> Mobilno čiščenje vozil — Ptuj in okolica</span>
+      <h1>Čisto. <span class="grad">Sveže.</span> Kot novo.</h1>
+      <p class="lead">Profesionalno čiščenje notranjosti in zunanjosti vozil — pridemo k vam, na vaš naslov, takrat ko vam ustreza. Brez izgubljenega časa, brez čakanja v vrsti.</p>
+      <div class="hero-ctas">
+        <a href="tel:+38651887853" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Pokliči: 051 887 853</a>
+        <a href="#kontakt" class="btn btn-ghost"><i class="fa-solid fa-envelope"></i> Povpraševanje</a>
+      </div>
+      <div class="hero-meta">
+        <span><i class="fa-solid fa-circle-check"></i> Osebna, gospodarska in kmetijska vozila</span>
+        <span><i class="fa-solid fa-circle-check"></i> Prilagodljivi termini</span>
+      </div>
+    </div>
+    <div class="hero-visual-wrap" data-reveal>
+      <div class="hero-visual">
+        <img src="data:image/jpeg;base64,HERO_B64" alt="Čiščenje notranjosti vozila — Čistkomobil">
+      </div>
+      <div class="service-ticket">
+        <div class="ticket-head">
+          <span class="ticket-dot"></span>
+          <span class="ticket-label">Na lokaciji · Ptuj</span>
+        </div>
+        <ul class="ticket-list" id="ticketList">
+          <li><span class="check"></span>Pregled vozila</li>
+          <li><span class="check"></span>Sesanje notranjosti</li>
+          <li><span class="check"></span>Čiščenje sedežev</li>
+          <li><span class="check"></span>Plastika in steklo</li>
+          <li><span class="check"></span>Razkuževanje</li>
+          <li><span class="check"></span>Zaključni pregled</li>
+        </ul>
+        <div class="ticket-progress"><div class="ticket-progress-bar" id="ticketProgress"></div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ TRUST BAR ============ -->
+<div class="trust-section container">
+  <div class="trust-grid" data-reveal>
+    <div class="trust-item">
+      <i class="fa-solid fa-route"></i>
+      <h4>Pridemo k vam</h4>
+      <p>Čiščenje opravimo neposredno na vaši lokaciji — doma, v službi ali na dvorišču.</p>
+    </div>
+    <div class="trust-item">
+      <i class="fa-solid fa-car-side"></i>
+      <h4>Vsa vozila</h4>
+      <p>Od osebnih avtomobilov do dostavnih vozil, tovornjakov in kmetijske mehanizacije.</p>
+    </div>
+    <div class="trust-item">
+      <i class="fa-solid fa-spray-can-sparkles"></i>
+      <h4>Profesionalna oprema</h4>
+      <p>Industrijski sesalniki, parni čistilci in preverjena, učinkovita čistilna sredstva.</p>
+    </div>
+    <div class="trust-item">
+      <i class="fa-solid fa-clock"></i>
+      <h4>Prilagodljivi termini</h4>
+      <p>Tudi zgodaj zjutraj, zvečer ali ob koncu tedna — po predhodnem dogovoru.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ STORITVE ============ -->
+<section class="services section" id="storitve">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow"><i class="fa-solid fa-list-check"></i> Storitve</span>
+      <h2>Vse, kar vaše vozilo potrebuje</h2>
+      <p>Od hitrega osvežitvenega čiščenja do popolne obnove notranjosti — vsako vozilo obravnavamo po meri, neposredno na vaši lokaciji.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-reveal>
+        <div class="service-icon"><i class="fa-solid fa-broom"></i></div>
+        <h3>Notranje čiščenje</h3>
+        <p>Temeljito sesanje sedežev, talnih oblog in prtljažnika ter čiščenje plastičnih in stekljenih površin.</p>
+      </div>
+      <div class="service-card" data-reveal>
+        <div class="service-icon"><i class="fa-solid fa-couch"></i></div>
+        <h3>Globinsko čiščenje tekstila</h3>
+        <p>Parno čiščenje sedežev, preprog in stropne oblazinjenosti za odstranjevanje madežev in vonjav.</p>
+      </div>
+      <div class="service-card" data-reveal>
+        <div class="service-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+        <h3>Nega usnja in plastike</h3>
+        <p>Čiščenje in zaščita usnjenih sedežev ter armaturne plošče z negovalnimi sredstvi za dolgotrajen videz.</p>
+      </div>
+      <div class="service-card" data-reveal>
+        <div class="service-icon"><i class="fa-solid fa-soap"></i></div>
+        <h3>Zunanje pranje</h3>
+        <p>Ročno pranje karoserije, platišč in stekel ter osnovna zaščita laka po pranju.</p>
+      </div>
+      <div class="service-card" data-reveal>
+        <div class="service-icon"><i class="fa-solid fa-wind"></i></div>
+        <h3>Razkuževanje in dezodorizacija</h3>
+        <p>Ozonsko razkuževanje in trajno odstranjevanje neprijetnih vonjav — cigareti, hišni ljubljenčki, vlaga.</p>
+      </div>
+      <div class="service-card" data-reveal>
+        <div class="service-icon"><i class="fa-solid fa-tractor"></i></div>
+        <h3>Gospodarska in kmetijska vozila</h3>
+        <p>Čiščenje kabin tovornjakov, dostavnih vozil, traktorjev in druge delovne mehanizacije.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KAKO POTEKA ============ -->
+<section class="process section" id="kako-poteka">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow"><i class="fa-solid fa-route"></i> Kako poteka</span>
+      <h2>Štirje koraki do čistega vozila</h2>
+      <p>Brez prevoza in čakanja — celoten postopek poteka tam, kjer je vaše vozilo trenutno parkirano.</p>
+    </div>
+    <div class="process-track">
+      <div class="process-line"><div class="process-line-fill" id="processFill"></div></div>
+      <div class="process-list">
+        <div class="process-step" data-reveal>
+          <span class="num-dot">01</span>
+          <h3>Povpraševanje</h3>
+          <p>Pišete ali pokličete in nam poveste vrsto vozila ter kaj vas pri njem najbolj moti.</p>
+        </div>
+        <div class="process-step" data-reveal>
+          <span class="num-dot">02</span>
+          <h3>Dogovor o terminu</h3>
+          <p>Skupaj določimo datum, uro in lokacijo — pri vas doma, v službi ali kjerkoli vam ustreza.</p>
+        </div>
+        <div class="process-step" data-reveal>
+          <span class="num-dot">03</span>
+          <h3>Čiščenje na lokaciji</h3>
+          <p>Pripeljemo vso potrebno opremo in vozilo temeljito očistimo na mestu, kjer je parkirano.</p>
+        </div>
+        <div class="process-step" data-reveal>
+          <span class="num-dot">04</span>
+          <h3>Pregled in predaja</h3>
+          <p>Skupaj preverimo rezultat, plačilo poteka na mestu — vozilo pa zadiši kot novo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERIJA ============ -->
+<section class="gallery section" id="galerija">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow"><i class="fa-solid fa-images"></i> Galerija</span>
+      <h2>Naše delo govori zase</h2>
+      <p>Izbor nedavno očiščenih vozil — od mestnih avtomobilov do gospodarske mehanizacije.</p>
+    </div>
+    <div class="gallery-grid" data-reveal>
+      <div class="gallery-item tall" data-caption="Globinsko čiščenje sedežev in armaturne plošče">
+        <img src="data:image/jpeg;base64,GALLERY1_B64" alt="Čiščenje armaturne plošče in konzole" loading="lazy">
+        <div class="gallery-caption">Armaturna plošča in konzola</div>
+      </div>
+      <div class="gallery-item" data-caption="Sesanje in čiščenje zadnjih sedežev">
+        <img src="data:image/jpeg;base64,GALLERY2_B64" alt="Očiščeni zadnji sedeži" loading="lazy">
+        <div class="gallery-caption">Zadnji sedeži</div>
+      </div>
+      <div class="gallery-item" data-caption="Temeljito očiščen prtljažnik">
+        <img src="data:image/jpeg;base64,GALLERY3_B64" alt="Očiščen prtljažnik" loading="lazy">
+        <div class="gallery-caption">Prtljažnik</div>
+      </div>
+      <div class="gallery-item tall" data-caption="Čiščenje kabin kmetijske mehanizacije">
+        <img src="data:image/jpeg;base64,TRACTOR_B64" alt="Očiščena kabina traktorja" loading="lazy">
+        <div class="gallery-caption">Kmetijska in gospodarska vozila</div>
+      </div>
+      <div class="gallery-item" data-caption="Velik prtljažnik SUV po čiščenju">
+        <img src="data:image/jpeg;base64,GALLERY4_B64" alt="Očiščen prtljažnik SUV" loading="lazy">
+        <div class="gallery-caption">Prtljažnik SUV</div>
+      </div>
+      <div class="gallery-item" data-caption="Notranjost kabine po čiščenju">
+        <img src="data:image/jpeg;base64,GALLERY5_B64" alt="Očiščena notranjost vozila" loading="lazy">
+        <div class="gallery-caption">Notranjost kabine</div>
+      </div>
+      <div class="gallery-item" data-caption="Ročno sesanje za popoln rezultat">
+        <img src="data:image/jpeg;base64,VACUUM_B64" alt="Sesanje talnih oblog" loading="lazy">
+        <div class="gallery-caption">Ročno sesanje</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CENIK ============ -->
+<section class="pricing section" id="cenik">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow"><i class="fa-solid fa-tags"></i> Cenik</span>
+      <h2>Pregledni paketi čiščenja</h2>
+      <p>Osnovne cene za osebna vozila. Dejanska cena je odvisna od velikosti, stanja in opremljenosti vozila.</p>
+    </div>
+    <div class="pricing-note" data-reveal>
+      <i class="fa-solid fa-circle-info"></i>
+      <span>Cene so okvirne in veljajo za standardna osebna vozila. Za večja vozila (kombi, terenska vozila, gospodarska in kmetijska mehanizacija) vam po ogledu pripravimo natančno ponudbo brez obveznosti.</span>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card" data-reveal>
+        <h3>Osnovno</h3>
+        <p class="price-desc">Hitra osvežitev notranjosti</p>
+        <div class="price">od 25 € <span>/ vozilo</span></div>
+        <ul class="price-features">
+          <li><i class="fa-solid fa-check"></i> Sesanje celotne notranjosti</li>
+          <li><i class="fa-solid fa-check"></i> Čiščenje plastičnih površin in armaturne plošče</li>
+          <li><i class="fa-solid fa-check"></i> Čiščenje stekel od znotraj</li>
+          <li><i class="fa-solid fa-check"></i> Osvežilec zraka</li>
+        </ul>
+        <a href="#kontakt" class="btn btn-outline btn-block">Povpraševanje</a>
+      </div>
+      <div class="price-card featured" data-reveal>
+        <span class="badge">Priporočeno</span>
+        <h3>Standard</h3>
+        <p class="price-desc">Globinska osvežitev notranjosti</p>
+        <div class="price">od 45 € <span>/ vozilo</span></div>
+        <ul class="price-features">
+          <li><i class="fa-solid fa-check"></i> Vse iz paketa Osnovno</li>
+          <li><i class="fa-solid fa-check"></i> Globinsko / parno čiščenje sedežev in tekstila</li>
+          <li><i class="fa-solid fa-check"></i> Čiščenje talnih oblog in predpražnikov</li>
+          <li><i class="fa-solid fa-check"></i> Osnovno razkuževanje notranjosti</li>
+        </ul>
+        <a href="#kontakt" class="btn btn-primary btn-block">Povpraševanje</a>
+      </div>
+      <div class="price-card" data-reveal>
+        <h3>Premium</h3>
+        <p class="price-desc">Notranjost in zunanjost kot novo</p>
+        <div class="price">od 85 € <span>/ vozilo</span></div>
+        <ul class="price-features">
+          <li><i class="fa-solid fa-check"></i> Vse iz paketa Standard</li>
+          <li><i class="fa-solid fa-check"></i> Ročno pranje in vosek karoserije</li>
+          <li><i class="fa-solid fa-check"></i> Čiščenje platišč in zaščita gum</li>
+          <li><i class="fa-solid fa-check"></i> Ozonsko razkuževanje in nega usnja</li>
+        </ul>
+        <a href="#kontakt" class="btn btn-outline btn-block">Povpraševanje</a>
+      </div>
+    </div>
+    <div class="fleet-card" data-reveal>
+      <div class="fleet-card-text">
+        <h3>Gospodarska in kmetijska vozila</h3>
+        <p>Tovornjaki, dostavna vozila, traktorji in druga delovna mehanizacija — cena po ogledu glede na velikost in obseg dela.</p>
+      </div>
+      <div class="fleet-icons">
+        <i class="fa-solid fa-truck"></i>
+        <i class="fa-solid fa-tractor"></i>
+        <i class="fa-solid fa-van-shuttle"></i>
+      </div>
+      <a href="#kontakt" class="btn btn-primary">Povprašaj za ponudbo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ O NAS ============ -->
+<section class="about section" id="o-nas">
+  <div class="container about-grid">
+    <div class="about-visual" data-reveal>
+      <img src="data:image/jpeg;base64,ABOUT_B64" alt="Notranjost vozila po čiščenju">
+      <div class="about-badge">
+        <img src="data:image/jpeg;base64,MASCOT_B64" alt="Čistkomobil maskota">
+        <p><strong>Čistkomobil</strong>Skrbno, zanesljivo in z veseljem do detajlov.</p>
+      </div>
+    </div>
+    <div class="about-text" data-reveal>
+      <span class="eyebrow"><i class="fa-solid fa-location-dot"></i> O nas</span>
+      <h2>Lokalna ekipa s Ptuja, ki pride k vam</h2>
+      <p>Čistkomobil je mobilna ekipa za čiščenje vozil s sedežem na Ptuju. Specializirani smo za temeljito notranje in zunanje čiščenje — od mestnih avtomobilov do gospodarskih in kmetijskih vozil. Delo opravimo neposredno pri vas, z lastno profesionalno opremo in preverjenimi sredstvi, brez izgubljenega časa s prevozom ali čakanjem v vrsti.</p>
+      <div class="about-features">
+        <div class="about-feature"><i class="fa-solid fa-screwdriver-wrench"></i><span>Lastna profesionalna opema</span></div>
+        <div class="about-feature"><i class="fa-solid fa-calendar-days"></i><span>Prilagodljivi termini, tudi ob vikendih</span></div>
+        <div class="about-feature"><i class="fa-solid fa-truck-monster"></i><span>Izkušnje z vsemi vrstami vozil</span></div>
+        <div class="about-feature"><i class="fa-solid fa-leaf"></i><span>Skrbno izbrana čistilna sredstva</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section class="contact section" id="kontakt">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow"><i class="fa-solid fa-calendar-check"></i> Kontakt</span>
+      <h2>Rezerviraj termin</h2>
+      <p>Pišite, pokličite ali nas najdite na Facebooku — na povpraševanja se odzovemo hitro.</p>
+    </div>
+    <div class="contact-grid">
+      <div data-reveal>
+        <div class="contact-cards">
+          <div class="contact-card">
+            <i class="fa-solid fa-phone"></i>
+            <h4>Telefon</h4>
+            <a href="tel:+38651887853">051 887 853</a>
+          </div>
+          <div class="contact-card">
+            <i class="fa-solid fa-envelope"></i>
+            <h4>E-naslov</h4>
+            <a href="mailto:cistkomobil14@gmail.com">cistkomobil14@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <h4>Naslov</h4>
+            <p>Trstenjakova ulica 5<br>2250 Ptuj</p>
+          </div>
+          <div class="contact-card">
+            <i class="fa-solid fa-route"></i>
+            <h4>Območje delovanja</h4>
+            <p>Ptuj in okolica (do 30 km), po dogovoru tudi dlje</p>
+          </div>
+          <div class="contact-card">
+            <i class="fa-solid fa-clock"></i>
+            <h4>Delovni čas</h4>
+            <p>Pon–Pet: 8.00–18.00<br>Sob: 9.00–14.00</p>
+          </div>
+          <div class="contact-card">
+            <i class="fa-brands fa-facebook-f"></i>
+            <h4>Facebook</h4>
+            <a href="https://www.facebook.com/profile.php?id=61585264907821" target="_blank" rel="noopener">Čistkomobil</a>
+          </div>
+        </div>
+        <a href="tel:+38651887853" class="btn btn-primary contact-cta"><i class="fa-solid fa-phone"></i> Pokliči zdaj</a>
+      </div>
+      <div class="map-wrap" data-reveal>
+        <iframe src="https://maps.google.com/maps?q=Trstenjakova%20ulica%205%2C%202250%20Ptuj&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokacija Čistkomobil na zemljevidu"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-mark"><i class="fa-solid fa-droplet"></i></span>
+          Čistko<span class="accent">mobil</span>
+        </a>
+        <p>Mobilno čiščenje notranjosti in zunanjosti vozil. Pridemo k vam — Ptuj in okolica.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=61585264907821" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="mailto:cistkomobil14@gmail.com" aria-label="E-naslov"><i class="fa-solid fa-envelope"></i></a>
+          <a href="tel:+38651887853" aria-label="Telefon"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Storitve</h4>
+        <ul>
+          <li><a href="#storitve">Notranje čiščenje</a></li>
+          <li><a href="#storitve">Globinsko čiščenje tekstila</a></li>
+          <li><a href="#storitve">Zunanje pranje</a></li>
+          <li><a href="#storitve">Razkuževanje</a></li>
+          <li><a href="#storitve">Kmetijska vozila</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Povezave</h4>
+        <ul>
+          <li><a href="#kako-poteka">Kako poteka</a></li>
+          <li><a href="#galerija">Galerija</a></li>
+          <li><a href="#cenik">Cenik</a></li>
+          <li><a href="#o-nas">O nas</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="tel:+38651887853">051 887 853</a></li>
+          <li><a href="mailto:cistkomobil14@gmail.com">cistkomobil14@gmail.com</a></li>
+          <li><a href="#">Trstenjakova ulica 5, Ptuj</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Čistkomobil. Vse pravice pridržane.</span>
+      <span>Stran pripravil <a href="https://pintsite.si" target="_blank" rel="noopener">pintsite.si</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Zapri"><i class="fa-solid fa-xmark"></i></button>
+  <div class="lightbox-inner">
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+</div>
+
+<script>
+// Year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Nav scroll state
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 30);
+}, {passive:true});
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('active');
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  hamburger.classList.remove('active');
+  navLinks.classList.remove('active');
+}));
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('[data-reveal]');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, {threshold: 0.15});
+revealEls.forEach(el => revealObserver.observe(el));
+
+// Process line fill
+const processFill = document.getElementById('processFill');
+const processTrack = document.querySelector('.process-track');
+if (processTrack) {
+  const processObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        processFill.style.width = '100%';
+        processObserver.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.3});
+  processObserver.observe(processTrack);
+}
+
+// Floating particles
+(function(){
+  const container = document.getElementById('particles');
+  const count = 14;
+  for (let i = 0; i < count; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const size = Math.random() * 70 + 20;
+    p.style.width = size + 'px';
+    p.style.height = size + 'px';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.setProperty('--drift', (Math.random() * 80 - 40) + 'px');
+    p.style.animationDuration = (Math.random() * 14 + 14) + 's';
+    p.style.animationDelay = (Math.random() * -26) + 's';
+    container.appendChild(p);
+  }
+})();
+
+// Service ticket cycle (signature element)
+(function(){
+  const items = document.querySelectorAll('#ticketList li');
+  const bar = document.getElementById('ticketProgress');
+  let idx = 0;
+  let timer;
+  function step(){
+    if (idx < items.length){
+      items[idx].classList.add('done');
+      idx++;
+      bar.style.width = (idx/items.length*100) + '%';
+      timer = setTimeout(step, 650);
+    } else {
+      timer = setTimeout(reset, 2200);
+    }
+  }
+  function reset(){
+    items.forEach(li => li.classList.remove('done'));
+    bar.style.width = '0%';
+    idx = 0;
+    timer = setTimeout(step, 700);
+  }
+  step();
+})();
+
+// Lightbox
+(function(){
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const closeBtn = document.getElementById('lightboxClose');
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxCaption.textContent = item.dataset.caption || '';
+      lightbox.classList.add('active');
+    });
+  });
+  function close(){ lightbox.classList.remove('active'); }
+  closeBtn.addEventListener('click', close);
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) close(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+})();
+</script>
+</body>
+</html>
