@@ -384,12 +384,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
 
 /* ============ GALLERY ============ */
 .gallery{background:var(--paper-50);}
-.gallery-hint{
-  display:none;align-items:center;gap:8px;
-  margin-top:14px;font-family:var(--font-mono);font-size:.78rem;
-  letter-spacing:.08em;text-transform:uppercase;color:var(--slate-400);
-}
 .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;grid-auto-flow:dense;gap:16px;margin-top:56px;}
+.gallery-track-wrap{display:contents;}
+.gallery-track{display:contents;}
+.gallery-track.dup{display:none;}
 .gallery-item{position:relative;border-radius:var(--radius-md);overflow:hidden;cursor:pointer;grid-row:span 1;}
 .gallery-item.tall{grid-row:span 2;}
 .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease);}
@@ -415,34 +413,48 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
   .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px;}
 }
 @media(max-width:680px){
-  .gallery-hint{display:flex;}
   .gallery-grid{
-    display:flex;
-    grid-template-columns:unset;
-    grid-auto-rows:unset;
-    grid-auto-flow:unset;
-    overflow-x:auto;
-    scroll-snap-type:x mandatory;
-    -webkit-overflow-scrolling:touch;
-    scrollbar-width:none;
-    gap:14px;
-    margin:28px -5% 0;
-    padding:4px 5% 8px;
-    scroll-padding-left:5%;
+    display:block;
+    overflow:hidden;
+    margin:28px -20px 0;
+    padding:4px 0 8px;
+    -webkit-mask-image:linear-gradient(to right, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
+    mask-image:linear-gradient(to right, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
   }
-  .gallery-grid::-webkit-scrollbar{display:none;}
+  .gallery-track-wrap{
+    display:flex;
+    width:max-content;
+    animation:gallery-marquee 32s linear infinite;
+  }
+  .gallery-track{
+    display:flex;
+    gap:14px;
+    padding-left:14px;
+  }
+  .gallery-track.dup{display:flex;}
   .gallery-item, .gallery-item.tall{
     grid-row:auto;
-    flex:0 0 80%;
+    flex:0 0 auto;
+    width:62vw;
     aspect-ratio:4/5;
-    scroll-snap-align:start;
   }
   .gallery-caption{
     opacity:1;transform:none;
     background:linear-gradient(to top,rgba(10,15,24,.8),transparent 65%);
   }
   .gallery-item::before{display:none;}
+  @keyframes gallery-marquee{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
 }
+@media(max-width:680px) and (prefers-reduced-motion:reduce){
+  .gallery-track-wrap{animation:none;}
+  .gallery-track.dup{display:none;}
+  .gallery-grid{overflow-x:auto;}
+  .gallery-track-wrap{width:auto;}
+}
+
 
 /* lightbox */
 .lightbox{
@@ -591,14 +603,19 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
   .section-head p{font-size:.98rem;}
 
   /* Hero */
-  .hero{padding-top:96px;padding-bottom:36px;}
-  .hero-grid{gap:40px;}
-  .hero-text h1{font-size:clamp(2.1rem,10vw,2.7rem);margin:14px 0 16px;}
-  .hero-text p.lead{font-size:1rem;margin-bottom:26px;}
+  .hero{min-height:100dvh;padding-top:108px;padding-bottom:48px;}
+  .hero-grid{gap:48px;}
+  .hero-text{display:flex;flex-direction:column;}
+  .hero-text .eyebrow{margin-bottom:2px;}
+  .hero-text h1{font-size:clamp(2.1rem,10vw,2.7rem);margin:18px 0 18px;}
+  .hero-text p.lead{font-size:1.02rem;margin-bottom:30px;}
+  .hero-ctas{margin-bottom:0;}
   .hero-visual{aspect-ratio:4/3.2;}
-  .service-ticket{padding:16px 18px;width:100%;margin-top:16px;}
-  .ticket-list li{font-size:.74rem;}
-  .ticket-label{font-size:.62rem;}
+  .service-ticket{padding:18px 20px;width:100%;margin-top:22px;}
+  .ticket-head{margin-bottom:16px;}
+  .ticket-list li{font-size:.78rem;padding:6px 0;}
+  .ticket-label{font-size:.64rem;}
+  .ticket-progress{margin-top:16px;}
 
   /* Trust bar */
   .trust-item{padding:22px 20px;}
@@ -606,18 +623,18 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
   .trust-item p{font-size:.84rem;}
 
   /* Services */
-  .services-grid{gap:16px;margin-top:40px;}
+  .services-grid{gap:20px;margin-top:40px;}
   .service-card{padding:26px 22px;}
   .service-icon{width:48px;height:48px;margin-bottom:18px;}
 
   /* Process */
-  .process-list{gap:32px;}
+  .process-list{gap:40px;}
 
   /* Gallery */
   .gallery-grid{margin-top:32px;}
 
   /* Pricing */
-  .pricing-grid{gap:18px;margin-top:24px;}
+  .pricing-grid{gap:20px;margin-top:28px;}
   .price-card{padding:28px 24px;}
   .price-card .price{font-size:1.9rem;margin:14px 0 20px;}
   .pricing-note{padding:14px 16px;font-size:.85rem;margin-top:28px;}
@@ -628,10 +645,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
   .about-badge{padding:14px;gap:12px;}
   .about-badge img{width:46px;height:46px;}
   .about-badge p{font-size:.8rem;}
-  .about-features{gap:14px;}
+  .about-features{gap:18px;}
 
   /* Contact */
-  .contact-cards{gap:14px;}
+  .contact-cards{gap:16px;}
   .contact-card{padding:20px;}
   .contact-grid{margin-top:36px;}
   .map-wrap{min-height:260px;}
@@ -857,9 +874,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
       <span class="eyebrow"><svg class="icon"><use href="#i-images"></use></svg> Galerija</span>
       <h2>Naše delo govori zase</h2>
       <p>Izbor nedavno očiščenih vozil.</p>
-      <p class="gallery-hint"><svg class="icon"><use href="#i-swap"></use></svg> Povleci za več</p>
     </div>
     <div class="gallery-grid" data-reveal>
+      <div class="gallery-track-wrap">
+      <div class="gallery-track">
       <div class="gallery-item tall" data-caption="Globinsko čiščenje sedežev in armaturne plošče">
         <img src="images/gallery1.jpg" alt="Čiščenje armaturne plošče in konzole" loading="lazy">
         <div class="gallery-caption">Armaturna plošča in konzola</div>
@@ -888,6 +906,39 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.15;let
         <img src="images/vacuum.jpg" alt="Sesanje talnih oblog" loading="lazy">
         <div class="gallery-caption">Ročno sesanje</div>
       </div>
+      </div>
+      <div class="gallery-track dup" aria-hidden="true">
+      <div class="gallery-item tall" data-caption="Globinsko čiščenje sedežev in armaturne plošče">
+        <img src="images/gallery1.jpg" alt="" loading="lazy">
+        <div class="gallery-caption">Armaturna plošča in konzola</div>
+      </div>
+      <div class="gallery-item" data-caption="Sesanje in čiščenje zadnjih sedežev">
+        <img src="images/gallery2.jpg" alt="" loading="lazy">
+        <div class="gallery-caption">Zadnji sedeži</div>
+      </div>
+      <div class="gallery-item" data-caption="Temeljito očiščen prtljažnik">
+        <img src="images/gallery3.jpg" alt="" loading="lazy">
+        <div class="gallery-caption">Prtljažnik</div>
+      </div>
+      <div class="gallery-item" data-caption="Čiščenje kabin kmetijske mehanizacije">
+        <img src="images/tractor.jpg" alt="" loading="lazy">
+        <div class="gallery-caption">Kmetijska in gospodarska vozila</div>
+      </div>
+      <div class="gallery-item" data-caption="Velik prtljažnik SUV po čiščenju">
+        <img src="images/gallery4.jpg" alt="" loading="lazy">
+        <div class="gallery-caption">Prtljažnik SUV</div>
+      </div>
+      <div class="gallery-item" data-caption="Notranjost kabine po čiščenju">
+        <img src="images/gallery5.jpg" alt="" loading="lazy">
+        <div class="gallery-caption">Notranjost kabine</div>
+      </div>
+      <div class="gallery-item" data-caption="Ročno sesanje za popoln rezultat">
+        <img src="images/vacuum.jpg" alt="" loading="lazy">
+        <div class="gallery-caption">Ročno sesanje</div>
+      </div>
+      </div>
+      </div>
+
     </div>
   </div>
 </section>
